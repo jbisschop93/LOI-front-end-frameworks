@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <img class="logo img-fluid" src="../../../assets/logo.png"/> 
+                    <img class="logo img-fluid" :src="require('@/assets/logo.png')"/> 
                 </div>
             </div>
         </div>
