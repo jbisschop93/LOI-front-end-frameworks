@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <PageHeader/>
-      <HomePage msg="hello world" rule1="test" rule2="test2"/>
+      <HomePage/>
     </v-main>
     <PageFooter/>
   </v-app>
@@ -20,11 +20,7 @@ export default {
     PageHeader,
     PageFooter,
     HomePage
-  },
-
-  data: () => ({
-    //
-  }),
+  }
 }
 </script>
 <style>

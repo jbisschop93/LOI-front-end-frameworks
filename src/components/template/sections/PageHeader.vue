@@ -1,18 +1,50 @@
 <template>
     <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <img class="logo img-fluid" :src="require('@/assets/logo.png')"/> 
-                </div>
-            </div>
-        </div>
+        <v-toolbar>
+            <img class="logo" :src="require('@/assets/logo.png')"/> 
+            <v-spacer></v-spacer>
+            <v-app-bar-nav-icon class="navtoggle" @click.stop="navbarVisible = !navbarVisible"></v-app-bar-nav-icon>
+        </v-toolbar>
+        <v-navigation-drawer
+            v-model="navbarVisible"
+            location="bottom"
+            temporary
+        >
+            <v-list
+            :items="menuItems"
+            ></v-list>
+        </v-navigation-drawer>
     </header>
 </template>
 
 <script>
 export default {
-  name: 'PageHeader'
+  name: 'PageHeader',
+  data: () => ({
+    navbarVisible: false,
+    menuItems: [
+      {
+        title: 'Schade opnemen',
+        value: 'Comming soon'
+      },
+      {
+        title: 'Achterstallig onderhoud opnemen',
+        value: 'Comming soon'
+      },
+      {
+        title: 'Technische installaties inspecteren',
+        value: 'Comming soon'
+      },
+      {
+        title: 'Modificaties inventariseren',
+        value: 'Comming soon'
+      },
+      {
+        title: 'Uitloggen',
+        value: 'Comming soon'
+      }
+    ]
+  }),
 }
 </script>
 
@@ -32,10 +64,13 @@ export default {
             background-position: top right;
         }
     }
-
     .logo 
     {
-        padding-top:15px;
-        padding-bottom:15px;
+        height:40px;
+    }
+
+    .navtoggle
+    {
+        color:#FFFFFF
     }
 </style>
