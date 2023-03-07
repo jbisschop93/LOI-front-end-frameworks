@@ -22,8 +22,15 @@ export default {
         background-color:#FFFFFF;
         background-image:url('../../../assets/headerbg.png');
         background-repeat:no-repeat;
-        background-position: top right;
+        background-position: top -240px;
         background-size:auto;
+    }
+
+    @media(min-width: 768px){
+        header 
+        {
+            background-position: top right;
+        }
     }
 
     .logo 
