@@ -1,10 +1,10 @@
 <template>
   <v-app>
     <v-main>
-      <PageHeader/>
-      <HomePage/>
+      <PageHeader :menuItems="menuItems"/>
+      <HomePage :menuItems="menuItems"/>
     </v-main>
-    <PageFooter/>
+    <PageFooter :menuItems="menuItems"/>
   </v-app>
 </template>
 
@@ -15,7 +15,32 @@ import HomePage from '@/components/pages/HomePage.vue'
 
 export default {
   name: 'App',
-
+  data: () => {
+    return {
+      menuItems: [
+        {
+          title: 'Toegewezen rapportages',
+          value: 'Comming soon',
+          icon: 'fa-solid fa-list-check'
+        },
+        {
+          title: 'Uitgevoerde rapportages',
+          value: 'Comming soon',
+          icon: 'fa-solid fa-clipboard-check'
+        },
+        {
+          title: 'Kennisbase',
+          value: 'Comming soon',
+          icon: 'fa-solid fa-graduation-cap'
+        },
+        {
+          title: 'Instellingen',
+          value: 'Comming soon',
+          icon: 'fa-solid fa-gears'
+        }
+      ]
+    }
+  },
   components: {
     PageHeader,
     PageFooter,

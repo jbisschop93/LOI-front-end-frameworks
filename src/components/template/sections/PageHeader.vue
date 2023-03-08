@@ -21,30 +21,11 @@
 export default {
   name: 'PageHeader',
   data: () => ({
-    navbarVisible: false,
-    menuItems: [
-      {
-        title: 'Schade opnemen',
-        value: 'Comming soon'
-      },
-      {
-        title: 'Achterstallig onderhoud opnemen',
-        value: 'Comming soon'
-      },
-      {
-        title: 'Technische installaties inspecteren',
-        value: 'Comming soon'
-      },
-      {
-        title: 'Modificaties inventariseren',
-        value: 'Comming soon'
-      },
-      {
-        title: 'Uitloggen',
-        value: 'Comming soon'
-      }
-    ]
+    navbarVisible: false
   }),
+  props: [
+    'menuItems'
+  ]
 }
 </script>
 

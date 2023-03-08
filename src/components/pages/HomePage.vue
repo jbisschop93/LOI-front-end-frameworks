@@ -2,23 +2,10 @@
   <div class="container">
     <h1>Direct naar:</h1>
     <div class="row">
-      <div class="col-6">
-        <HomeButton icon="fa-solid fa-house-chimney-crack" title="Schade opnemen"/>
-      </div>
-      <div class="col-6">
-        <HomeButton icon="fa-solid fa-house-circle-exclamation" title="Achterstallig onderhoud opnemen"/>
+      <div class="col-6 homebuttoncontainer" v-for="(item, index) in menuItems" v-bind:key="index">
+        <HomeButton :icon="item.icon" :title="item.title"/>
       </div>
     </div>
-    <div class="py-4"></div>
-    <div class="row">
-      <div class="col-6">
-        <HomeButton icon="fa-solid fa-list-check" title="Technische installaties inspecteren"/>
-      </div>
-      <div class="col-6">
-        <HomeButton icon="fa-solid fa-list-ol" title="Modificaties inventariseren"/>
-      </div>
-    </div>
-    <div class="py-4"></div>
   </div>
 </template>
 
@@ -28,7 +15,10 @@ export default {
   name: 'HomePage',
   components: {
     HomeButton
-  }
+  },
+  props: [
+    'menuItems'
+  ]
 }
 </script>
 
@@ -37,5 +27,10 @@ export default {
 .container, .container h1
 {
   color:#FFFFFF;
+}
+
+.homebuttoncontainer
+{
+  margin-bottom:25px;
 }
 </style>

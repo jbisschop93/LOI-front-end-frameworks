@@ -11,17 +11,17 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
 import { 
-  faHouseChimneyCrack,
-  faHouseCircleExclamation,
-  faListCheck,
-  faListOl
+  faClipboardCheck,
+  faGraduationCap,
+  faGears,
+  faListCheck
 } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faHouseChimneyCrack)
-library.add(faHouseCircleExclamation)
+library.add(faClipboardCheck)
 library.add(faListCheck)
-library.add(faListOl)
+library.add(faGraduationCap)
+library.add(faGears)
 
 loadFonts()
 
