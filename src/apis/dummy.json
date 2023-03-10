@@ -1,0 +1,71 @@
+{
+    "assignedReports": {
+        "recordedDamages": [],
+        "deferredMaintenance": [],
+        "technicalInstallations": [],
+        "modifications": []
+    },
+    "executedReports": {
+        "recordedDamages": [
+            {
+                "location": "Engelstilstraat 5a, 9671JE Winschoten",
+                "isNew": true,
+                "typeDamage": "Wear",
+                "date": "2023-10-03",
+                "urgentActionRequired": false,
+                "description": "Sorteren test (dit item is als eerste aangemaakt met de meest recente datum)"
+            },
+            {
+                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
+                "isNew": false,
+                "typeDamage": "Calamity",
+                "date": "2022-12-22",
+                "urgentActionRequired": true,
+                "description": "Klant kreeg zijn Vue installatie niet aan de praat en gooide vervolgens zijn laptop door het raam. Raam dient te worden vervangen voor de jaarwisseling."
+            },
+            {
+                "location": "Engelstilstraat 6, 9671JH Winschoten",
+                "isNew": false,
+                "typeDamage": "Other",
+                "date": "2020-06-01",
+                "urgentActionRequired": false,
+                "description": "Sorteren test 2 (dit item is als laatste aangemaakt met de oudste datum)"
+            }
+        ],
+        "deferredMaintenance": [
+            {
+                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
+                "typeMaintenance": "painting",
+                "urgentActionRequired": false,
+                "costIndication": "500-1500"
+            }, 
+            {
+                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
+                "typeMaintenance": "piping",
+                "urgentActionRequired": true,
+                "costIndication": "0-500"
+            }
+        ],
+        "technicalInstallations": [
+            {
+                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
+                "typeInstallation": "heating",
+                "reportedFailures": "n.v.t.",
+                "testProcedure": "https://www.example.com/test-procedure.pdf",
+                "approved": true,
+                "description": "2 jaarlijkse controle CV ketel"
+            }
+        ],
+        "modifications": [
+            {
+                "isNew": false,
+                "previousDocumentation": "https://www.example.com/documentation.pdf",
+                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
+                "executedBy": "Tenant",
+                "description": "Er lag wederom een laptop door het raam, waarna de klant zelf een houten plaat tegen het raam heeft getimmerd.",
+                "actionRequired": "removeModification",
+                "extraInformation": "Geen aangezicht voor de buren, raam dient vervangen te worden (op kosten van bewoner)."
+            }
+        ]
+    }
+}
