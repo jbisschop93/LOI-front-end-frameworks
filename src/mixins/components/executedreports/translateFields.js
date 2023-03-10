@@ -63,6 +63,12 @@ export default
                 case 'Calamity':
                     return 'Calamiteit';
 
+                case 'Wear':
+                    return 'Slijtage';
+
+                case 'Other':
+                    return 'Overige';
+
                 //Unknown type, return original value
                 default:
                     return type;
