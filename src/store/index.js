@@ -25,3 +25,6 @@ export default createStore({
         }
     }
 });
+
+//this.$store.state.counter = getter
+//this.$store.commit('increment') = setter
