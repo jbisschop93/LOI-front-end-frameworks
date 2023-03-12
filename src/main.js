@@ -3,6 +3,9 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
 
+//Import router
+import router from '@/router'
+
 /* import the fontawesome core */
 import { library } from '@fortawesome/fontawesome-svg-core'
 
@@ -27,5 +30,6 @@ loadFonts()
 
 createApp(App)
   .use(vuetify)
+  .use(router)
   .component('font-awesome-icon', FontAwesomeIcon)
   .mount('#app')

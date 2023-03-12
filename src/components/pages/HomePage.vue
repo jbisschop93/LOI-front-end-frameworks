@@ -3,7 +3,7 @@
     <h1>Direct naar:</h1>
     <div class="row">
       <div class="col-6 homebuttoncontainer" v-for="(item, index) in menuItems" v-bind:key="index">
-        <HomeButton :icon="item.icon" :title="item.title"/>
+        <HomeButton :icon="item.icon" :title="item.title" :to="item.to"/>
       </div>
     </div>
     <!-- Tijdelijk! -->

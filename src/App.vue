@@ -2,7 +2,7 @@
   <v-app>
     <v-main>
       <PageHeader :menuItems="menuItems"/>
-      <HomePage :menuItems="menuItems"/>
+      <router-view :menuItems="menuItems"/>
     </v-main>
     <PageFooter :menuItems="menuItems"/>
   </v-app>
@@ -11,7 +11,6 @@
 <script>
 import PageHeader from '@/components/template/sections/PageHeader.vue'
 import PageFooter from '@/components/template/sections/PageFooter.vue'
-import HomePage from '@/components/pages/HomePage.vue'
 
 export default {
   name: 'App',
@@ -20,22 +19,22 @@ export default {
       menuItems: [
         {
           title: 'Toegewezen rapportages',
-          value: 'Comming soon',
+          to: 'example',
           icon: 'fa-solid fa-list-check'
         },
         {
           title: 'Uitgevoerde rapportages',
-          value: 'Comming soon',
+          to: 'example',
           icon: 'fa-solid fa-clipboard-check'
         },
         {
           title: 'Kennisbase',
-          value: 'Comming soon',
+          to: 'example',
           icon: 'fa-solid fa-graduation-cap'
         },
         {
           title: 'Instellingen',
-          value: 'Comming soon',
+          to: 'example',
           icon: 'fa-solid fa-gears'
         }
       ]
@@ -43,8 +42,7 @@ export default {
   },
   components: {
     PageHeader,
-    PageFooter,
-    HomePage
+    PageFooter
   }
 }
 </script>

@@ -1,9 +1,11 @@
 <template>
     <div class="panel h-100 p-5" @click="handleButtonClick">
-        <div class="icon">
-            <font-awesome-icon :icon="icon" size="4x" />
-        </div>
-        <h2>{{ title }}</h2>
+        <router-link :to="to">
+            <div class="icon">
+                <font-awesome-icon :icon="icon" size="4x" />
+            </div>
+            <h2>{{ title }}</h2>
+        </router-link>
     </div>
 </template>
   
@@ -12,7 +14,8 @@
     name: 'HomeButton',
     props: [
         'icon',
-        'title'
+        'title',
+        'to'
     ],
     methods: {
         handleButtonClick(){
