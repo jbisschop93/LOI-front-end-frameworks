@@ -1,71 +1,214 @@
 {
-    "assignedReports": {
-        "recordedDamages": [],
-        "deferredMaintenance": [],
-        "technicalInstallations": [],
-        "modifications": []
-    },
-    "executedReports": {
-        "recordedDamages": [
-            {
-                "location": "Engelstilstraat 5a, 9671JE Winschoten",
-                "isNew": true,
-                "typeDamage": "Wear",
-                "date": "2023-10-03",
-                "urgentActionRequired": false,
-                "description": "Sorteren test (dit item is als eerste aangemaakt met de meest recente datum)"
+    "assignedReports": [
+        {
+            "title": "Jaarlijkse inspectie 2024",
+            "address": {
+                "street": "Burgemeester van Bakkeneslaan",
+                "houseNumber": 40,
+                "houseNumberAddon": "",
+                "zipCode": "9665GX",
+                "place": "Oude Pekela"
             },
-            {
-                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
-                "isNew": false,
-                "typeDamage": "Calamity",
-                "date": "2022-12-22",
-                "urgentActionRequired": true,
-                "description": "Klant kreeg zijn Vue installatie niet aan de praat en gooide vervolgens zijn laptop door het raam. Raam dient te worden vervangen voor de jaarwisseling."
+            "createdAt": "2023-03-12",
+            "inspectedAt": "",
+            "recordedDamages": [ ],
+            "deferredMaintenance": [ ],
+            "technicalInstallations": [ ],
+            "modifications": [ ]
+        },
+
+        {
+            "title": "Schademelding klant",
+            "address": {
+                "street": "Burgemeester van Bakkeneslaan",
+                "houseNumber": 40,
+                "houseNumberAddon": "",
+                "zipCode": "9665GX",
+                "place": "Oude Pekela"
             },
-            {
-                "location": "Engelstilstraat 6, 9671JH Winschoten",
-                "isNew": false,
-                "typeDamage": "Other",
-                "date": "2020-06-01",
-                "urgentActionRequired": false,
-                "description": "Sorteren test 2 (dit item is als laatste aangemaakt met de oudste datum)"
-            }
-        ],
-        "deferredMaintenance": [
-            {
-                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
-                "typeMaintenance": "painting",
-                "urgentActionRequired": false,
-                "costIndication": "500-1500"
-            }, 
-            {
-                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
-                "typeMaintenance": "piping",
-                "urgentActionRequired": true,
-                "costIndication": "0-500"
-            }
-        ],
-        "technicalInstallations": [
-            {
-                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
-                "typeInstallation": "heating",
-                "reportedFailures": "n.v.t.",
-                "testProcedure": "https://www.example.com/test-procedure.pdf",
-                "approved": true,
-                "description": "2 jaarlijkse controle CV ketel"
-            }
-        ],
-        "modifications": [
-            {
-                "isNew": false,
-                "previousDocumentation": "https://www.example.com/documentation.pdf",
-                "location": "Burgemeester van Bakkeneslaan 40, 9665GX Oude Pekela",
-                "executedBy": "Tenant",
-                "description": "Er lag wederom een laptop door het raam, waarna de klant zelf een houten plaat tegen het raam heeft getimmerd.",
-                "actionRequired": "removeModification",
-                "extraInformation": "Geen aangezicht voor de buren, raam dient vervangen te worden (op kosten van bewoner)."
-            }
-        ]
-    }
+            "createdAt": "2023-03-12",
+            "inspectedAt": "",
+            "recordedDamages": [
+                {
+                    "location": "Kelder",
+                    "isNew": true,
+                    "typeDamage": "Calamity",
+                    "date": "2023-03-12",
+                    "urgentActionRequired": true,
+                    "description": "Lekkage riolering onder toilet"
+                }
+            ],
+            "deferredMaintenance": [ ],
+            "technicalInstallations": [ ],
+            "modifications": [ ]
+        }
+    ],
+    "executedReports": [
+        {
+            "title": "Jaarlijkse inspectie 2023",
+            "address": {
+                "street": "Burgemeester van Bakkeneslaan",
+                "houseNumber": 40,
+                "houseNumberAddon": "",
+                "zipCode": "9665GX",
+                "place": "Oude Pekela"
+            },
+            "createdAt": "2023-01-01",
+            "inspectedAt": "2023-01-08",
+            "recordedDamages": [
+                {
+                    "location": "Dakgoot voorgevel links",
+                    "isNew": true,
+                    "typeDamage": "Wear",
+                    "date": "2023-01-08",
+                    "urgentActionRequired": false,
+                    "description": "Dakgoten vertonen beginnende lekkage"
+                }
+            ],
+            "deferredMaintenance": [
+                {
+                    "location": "Deuren en kozijnen buitenom",
+                    "typeMaintenance": "painting",
+                    "urgentActionRequired": false,
+                    "costIndication": "500-1500"
+                }, 
+                {
+                    "location": "Afvoer keuken (vertoont lekkage)",
+                    "typeMaintenance": "piping",
+                    "urgentActionRequired": true,
+                    "costIndication": "0-500"
+                }
+            ],
+            "technicalInstallations": [
+                {
+                    "location": "Bijkeuken",
+                    "typeInstallation": "heating",
+                    "reportedFailures": "n.v.t.",
+                    "testProcedure": "https://www.example.com/test-procedure.pdf",
+                    "approved": true,
+                    "description": "2 jaarlijkse controle CV ketel"
+                }
+            ],
+            "modifications": []
+        },
+        {
+            "title": "Schademelding klant",
+            "address": {
+                "street": "Burgemeester van Bakkeneslaan",
+                "houseNumber": 40,
+                "houseNumberAddon": "",
+                "zipCode": "9665GX",
+                "place": "Oude Pekela"
+            },
+            "createdAt": "2022-12-22",
+            "inspectedAt": "2022-12-23",
+            "recordedDamages": [
+                {
+                    "location": "Raam kleinste slaapkamer (boven), achtergevelzijde",
+                    "isNew": true,
+                    "typeDamage": "Calamity",
+                    "date": "2022-12-22",
+                    "urgentActionRequired": true,
+                    "description": "Klant kreeg zijn Vue installatie niet aan de praat en gooide vervolgens zijn laptop door het raam. Raam dient te worden vervangen voor de jaarwisseling."
+                }
+            ],
+            "deferredMaintenance": [ ],
+            "technicalInstallations": [ ],
+            "modifications": [
+                {
+                    "isNew": true,
+                    "previousDocumentation": "https://www.example.com/documentation.pdf",
+                    "location": "Raam kleinste slaapkamer (boven), achtergevelzijde",
+                    "executedBy": "Tenant",
+                    "description": "Klant heeft zelf een houten plaat tegen het raam getimmerd.",
+                    "actionRequired": "removeModification",
+                    "extraInformation": "Geen aangezicht voor de buren, beplating dient verwijderd te worden (op kosten van bewoner)."
+                }
+            ]
+        },
+        {
+            "title": "Jaarlijkse inspectie 2022",
+            "address": {
+                "street": "Burgemeester van Bakkeneslaan",
+                "houseNumber": 40,
+                "houseNumberAddon": "",
+                "zipCode": "9665GX",
+                "place": "Oude Pekela"
+            },
+            "createdAt": "2022-01-01",
+            "inspectedAt": "2022-02-01",
+            "recordedDamages": [
+                {
+                    "location": "Dakgoot achtergevel rechts",
+                    "isNew": true,
+                    "typeDamage": "Wear",
+                    "date": "2022-02-01",
+                    "urgentActionRequired": false,
+                    "description": "Dakgoten vertonen beginnende lekkage"
+                },
+                {
+                    "location": "Bijkeuken (achterdeur)",
+                    "isNew": true,
+                    "typeDamage": "regularUse",
+                    "date": "2022-02-01",
+                    "urgentActionRequired": true,
+                    "description": "Achterdeur klemt behoorlijk"
+                }
+            ],
+            "deferredMaintenance": [],
+            "technicalInstallations": [],
+            "modifications": []
+        },
+        {
+            "title": "Nieuwe keuken",
+            "address": {
+                "street": "Burgemeester van Bakkeneslaan",
+                "houseNumber": 40,
+                "houseNumberAddon": "",
+                "zipCode": "9665GX",
+                "place": "Oude Pekela"
+            },
+            "createdAt": "2021-05-01",
+            "inspectedAt": "2021-06-15",
+            "recordedDamages": [],
+            "deferredMaintenance": [],
+            "technicalInstallations": [],
+            "modifications": [
+                {
+                    "isNew": true,
+                    "previousDocumentation": "",
+                    "location": "Keuken",
+                    "executedBy": "Tenant",
+                    "description": "Klant heeft na overleg zelfstandig een nieuwe keuken geinstalleerd, deze moest echter na installatie nog worden goedgekeurd.",
+                    "actionRequired": "accept",
+                    "extraInformation": "Installatiewerk voldoet aan de eisen."
+                }
+            ]
+        },
+        {
+            "title": "Jaarlijkse inspectie 2021",
+            "address": {
+                "street": "Burgemeester van Bakkeneslaan",
+                "houseNumber": 40,
+                "houseNumberAddon": "",
+                "zipCode": "9665GX",
+                "place": "Oude Pekela"
+            },
+            "createdAt": "2022-01-01",
+            "inspectedAt": "2022-01-05",
+            "recordedDamages": [],
+            "deferredMaintenance": [],
+            "technicalInstallations": [
+                {
+                    "location": "Bijkeuken",
+                    "typeInstallation": "heating",
+                    "reportedFailures": "n.v.t.",
+                    "testProcedure": "https://www.example.com/test-procedure.pdf",
+                    "approved": true,
+                    "description": "2 jaarlijkse controle CV ketel"
+                }
+            ],
+            "modifications": []
+        }
+    ]
 }
