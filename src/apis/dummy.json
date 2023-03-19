@@ -1,35 +1,78 @@
 {
-    "assignedReports": [
+    "reportList": [
         {
+            "id": 256289,
+            "createdAt": "2023-03-05",
+            "inspectedAt": "",
+            "status": "assigned",
+            "title": "Deur sluit niet goed aan",
+            "address": {
+                "id": 128,
+                "createdAt": "2018-05-22",
+                "street": "Daltonlaan",
+                "houseNumber": 100,
+                "houseNumberAddon": "",
+                "zipCode": "3584BJ",
+                "place": "Utrecht"
+            },
+            "recordedDamages": [ ],
+            "deferredMaintenance": [
+                {
+                    "id": 225482,
+                    "createdAt": "2023-03-05",
+                    "updatedAt": "2023-03-05",
+                    "location": "Receptie (aankomsthal)",
+                    "isNew": true,
+                    "typeDamage": "Wear",
+                    "date": "2023-03-05",
+                    "urgentActionRequired": true,
+                    "description": "Deur gaat erg moeilijk dicht en sluit niet goed, hierdoor gaat het alarm regelmatig af."
+                }
+            ],
+            "technicalInstallations": [ ],
+            "modifications": [ ]
+        },
+        {
+            "id": 256215,
+            "createdAt": "2023-03-12",
+            "inspectedAt": "",
+            "status": "assigned",
             "title": "Jaarlijkse inspectie 2024",
             "address": {
+                "id": 89,
+                "createdAt": "2018-11-01",
                 "street": "Burgemeester van Bakkeneslaan",
                 "houseNumber": 40,
                 "houseNumberAddon": "",
                 "zipCode": "9665GX",
                 "place": "Oude Pekela"
             },
-            "createdAt": "2023-03-12",
-            "inspectedAt": "",
             "recordedDamages": [ ],
             "deferredMaintenance": [ ],
             "technicalInstallations": [ ],
             "modifications": [ ]
         },
-
         {
+            "id": 256265,
+            "createdAt": "2023-03-12",
+            "inspectedAt": "",
+            "status": "assigned",
             "title": "Schademelding klant",
             "address": {
+                "id": 89,
+                "createdAt": "2018-11-01",
                 "street": "Burgemeester van Bakkeneslaan",
                 "houseNumber": 40,
                 "houseNumberAddon": "",
                 "zipCode": "9665GX",
                 "place": "Oude Pekela"
             },
-            "createdAt": "2023-03-12",
-            "inspectedAt": "",
+            
             "recordedDamages": [
                 {
+                    "id": 225312,
+                    "createdAt": "2023-03-12",
+                    "updatedAt": "",
                     "location": "Kelder",
                     "isNew": true,
                     "typeDamage": "Calamity",
@@ -41,22 +84,50 @@
             "deferredMaintenance": [ ],
             "technicalInstallations": [ ],
             "modifications": [ ]
-        }
-    ],
-    "executedReports": [
+        },
         {
+            "id": 256022,
+            "createdAt": "2023-01-05",
+            "inspectedAt": "",
+            "status": "assigned",
+            "title": "Jaarlijkse inspectie 2024",
+            "address": {
+                "id": 128,
+                "createdAt": "2018-05-22",
+                "street": "Daltonlaan",
+                "houseNumber": 100,
+                "houseNumberAddon": "",
+                "zipCode": "3584BJ",
+                "place": "Utrecht"
+            },
+            
+            
+            "recordedDamages": [ ],
+            "deferredMaintenance": [ ],
+            "technicalInstallations": [ ],
+            "modifications": [ ]
+        },
+        {
+            "id": 256054,
+            "createdAt": "2023-01-01",
+            "inspectedAt": "2023-01-08",
+            "status": "completed",
             "title": "Jaarlijkse inspectie 2023",
             "address": {
+                "id": 89,
+                "createdAt": "2018-11-01",
                 "street": "Burgemeester van Bakkeneslaan",
                 "houseNumber": 40,
                 "houseNumberAddon": "",
                 "zipCode": "9665GX",
                 "place": "Oude Pekela"
             },
-            "createdAt": "2023-01-01",
-            "inspectedAt": "2023-01-08",
+            
             "recordedDamages": [
                 {
+                    "id": 225243,
+                    "createdAt": "2023-01-08",
+                    "updatedAt": "2023-01-09",
                     "location": "Dakgoot voorgevel links",
                     "isNew": true,
                     "typeDamage": "Wear",
@@ -67,12 +138,18 @@
             ],
             "deferredMaintenance": [
                 {
+                    "id": 224952,
+                    "createdAt": "2023-01-08",
+                    "updatedAt": "",
                     "location": "Deuren en kozijnen buitenom",
                     "typeMaintenance": "painting",
                     "urgentActionRequired": false,
                     "costIndication": "500-1500"
                 }, 
                 {
+                    "id": 224949,
+                    "createdAt": "2023-01-08",
+                    "updatedAt": "",
                     "location": "Afvoer keuken (vertoont lekkage)",
                     "typeMaintenance": "piping",
                     "urgentActionRequired": true,
@@ -81,6 +158,9 @@
             ],
             "technicalInstallations": [
                 {
+                    "id": 224948,
+                    "createdAt": "2023-01-08",
+                    "updatedAt": "",
                     "location": "Bijkeuken",
                     "typeInstallation": "heating",
                     "reportedFailures": "n.v.t.",
@@ -92,18 +172,25 @@
             "modifications": []
         },
         {
+            "id": 224945,
+            "createdAt": "2022-12-22",
+            "inspectedAt": "2022-12-23",
+            "status": "completed",
             "title": "Schademelding klant",
             "address": {
+                "id": 89,
+                "createdAt": "2018-11-01",
                 "street": "Burgemeester van Bakkeneslaan",
                 "houseNumber": 40,
                 "houseNumberAddon": "",
                 "zipCode": "9665GX",
                 "place": "Oude Pekela"
             },
-            "createdAt": "2022-12-22",
-            "inspectedAt": "2022-12-23",
             "recordedDamages": [
                 {
+                    "id": 224853,
+                    "createdAt": "2022-12-23",
+                    "updatedAt": "",
                     "location": "Raam kleinste slaapkamer (boven), achtergevelzijde",
                     "isNew": true,
                     "typeDamage": "Calamity",
@@ -116,6 +203,9 @@
             "technicalInstallations": [ ],
             "modifications": [
                 {
+                    "id": 224353,
+                    "createdAt": "2022-12-23",
+                    "updatedAt": "",
                     "isNew": true,
                     "previousDocumentation": "https://www.example.com/documentation.pdf",
                     "location": "Raam kleinste slaapkamer (boven), achtergevelzijde",
@@ -127,18 +217,25 @@
             ]
         },
         {
+            "id": 222110,
+            "createdAt": "2022-01-01",
+            "inspectedAt": "2022-02-01",
+            "status": "completed",
             "title": "Jaarlijkse inspectie 2022",
             "address": {
+                "id": 89,
+                "createdAt": "2018-11-01",
                 "street": "Burgemeester van Bakkeneslaan",
                 "houseNumber": 40,
                 "houseNumberAddon": "",
                 "zipCode": "9665GX",
                 "place": "Oude Pekela"
             },
-            "createdAt": "2022-01-01",
-            "inspectedAt": "2022-02-01",
             "recordedDamages": [
                 {
+                    "id": 223293,
+                    "createdAt": "2022-01-01",
+                    "updatedAt": "",
                     "location": "Dakgoot achtergevel rechts",
                     "isNew": true,
                     "typeDamage": "Wear",
@@ -147,6 +244,9 @@
                     "description": "Dakgoten vertonen beginnende lekkage"
                 },
                 {
+                    "id": 223290,
+                    "createdAt": "2022-01-01",
+                    "updatedAt": "2022-01-03",
                     "location": "Bijkeuken (achterdeur)",
                     "isNew": true,
                     "typeDamage": "regularUse",
@@ -160,21 +260,29 @@
             "modifications": []
         },
         {
+            "id": 222110,
+            "createdAt": "2021-05-01",
+            "inspectedAt": "2021-06-15",
+            "status": "completed",
             "title": "Nieuwe keuken",
             "address": {
+                "id": 89,
+                "createdAt": "2018-11-01",
                 "street": "Burgemeester van Bakkeneslaan",
                 "houseNumber": 40,
                 "houseNumberAddon": "",
                 "zipCode": "9665GX",
                 "place": "Oude Pekela"
             },
-            "createdAt": "2021-05-01",
-            "inspectedAt": "2021-06-15",
+            
             "recordedDamages": [],
             "deferredMaintenance": [],
             "technicalInstallations": [],
             "modifications": [
                 {
+                    "id": 216102,
+                    "createdAt": "2021-06-15",
+                    "updatedAt": "",
                     "isNew": true,
                     "previousDocumentation": "",
                     "location": "Keuken",
@@ -186,20 +294,28 @@
             ]
         },
         {
+            "id": 2221005,
+            "createdAt": "2022-01-01",
+            "inspectedAt": "2022-01-05",
+            "status": "completed",
             "title": "Jaarlijkse inspectie 2021",
             "address": {
+                "id": 89,
+                "createdAt": "2018-11-01",
                 "street": "Burgemeester van Bakkeneslaan",
                 "houseNumber": 40,
                 "houseNumberAddon": "",
                 "zipCode": "9665GX",
                 "place": "Oude Pekela"
             },
-            "createdAt": "2022-01-01",
-            "inspectedAt": "2022-01-05",
+            
             "recordedDamages": [],
             "deferredMaintenance": [],
             "technicalInstallations": [
                 {
+                    "id": 216005,
+                    "createdAt": "2022-01-05",
+                    "updatedAt": "",
                     "location": "Bijkeuken",
                     "typeInstallation": "heating",
                     "reportedFailures": "n.v.t.",
