@@ -10,15 +10,29 @@ export default
 
     async getAll() {
 
-        let returnObj;
+        let returnObj
 
         //Await API CALL and return object containing models
         await this.API.get('reportList').then((object) => {
             returnObj = object.map((data) => {
                 return new AssignedReport(data)
-            });
+            })
         })
-        console.log(returnObj);
-        return returnObj;
+        return returnObj
+    },
+
+    async getById(id) {
+        //Simulated "Get By Id" call by looping thru all items, returning the item which matches requested ID.
+        let returnObj;
+
+        await this.getAll().then((object) => {
+            object = object.filter((data) => data.id == id)
+            if(object.length == 1)
+            {
+                returnObj =  new AssignedReport(object[0])
+            }
+        })
+
+        return returnObj
     }
 }

@@ -37,6 +37,9 @@ export default
                 case 'removeModification':
                     return 'Laten verwijderen';
 
+                case 'accept':
+                    return 'Geen (geacepteerd)'
+
                 //Unknown type, return original value
                 default:
                     return type;
@@ -60,6 +63,9 @@ export default
         {
             switch(type)
             {
+                case 'regularUse':
+                    return 'Normaal gebruik'
+
                 case 'Calamity':
                     return 'Calamiteit';
 

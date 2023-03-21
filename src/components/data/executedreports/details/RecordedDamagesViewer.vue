@@ -1,28 +1,21 @@
 <template>
-    <ul>
-        <li>
-            <b>Locatie:</b><br/>
-            {{ this.recordedDamages.location }}
-        </li>
-        <li>
-            <b>Nieuwe schade:</b><br/>
-            {{ this.recordedDamages.isNew ? 'Ja' : 'Nee' }}
-        </li>
-        <li>
-            <b>Soort schade:</b><br/>
-            {{ translateTypeDamage(this.recordedDamages.typeDamage) }}
-        </li>
-        <li>
-            <b>Datum:</b><br/>
-            {{ formatDate(this.recordedDamages.date) }}
-        </li>
-        <li>
-            <b>Acute actie vereist:</b><br/>
-            {{ this.recordedDamages.urgentActionRequired ? 'Ja' : 'Nee' }}
-        </li>
-        <li>
-            <b>Omschrijving:</b><br/>
-            {{ this.recordedDamages.description }}
+    <p v-if="currentReport.recordedDamages.length == 0">N.v.t.</p>
+    <ul v-else>
+        <li v-for="(item, index) in currentReport.recordedDamages" v-bind:key="index">
+            <b>Gemeld op:</b>
+            <p>{{ formatDate(item.createdAt) }}</p>
+            <b>Locatie:</b>
+            <p>{{ item.location }}</p>
+            <b>Nieuwe schade:</b>
+            <p>{{ item.isNew }}</p>
+            <b>Type schade:</b>
+            <p>{{ translateTypeDamage(item.typeDamage) }}</p>
+            <b>Datum:</b>
+            <p>{{ formatDate(item.date) }}</p>
+            <b>Acute actie vereist:</b>
+            <p>{{ item.urgentActionRequired ? 'Ja' : 'Nee' }}</p>
+            <b>Omschrijving:</b>
+            <p>{{ item.description }}</p>
         </li>
     </ul>
 </template>
@@ -32,7 +25,7 @@
     export default 
     {
         props: [
-            'recordedDamages'
+            'currentReport'
         ],
         mixins: [
             translateFields,

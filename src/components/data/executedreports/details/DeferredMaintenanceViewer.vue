@@ -1,31 +1,28 @@
 <template>
-    <ul>
-        <li>
-            <b>Locatie:</b><br/>
-            {{ this.deferredMaintenance.location }}
-        </li>
-        <li>
-            <b>Soort onderhoud:</b><br/>
-            {{ translateTypeMaintenance(this.deferredMaintenance.typeMaintenance) }}
-        </li>
-        <li>
-            <b>Acute actie vereist:</b><br/>
-            {{ this.deferredMaintenance.urgentActionRequired ? 'Ja' : 'Nee' }}
-        </li>
-        <li>
-            <b>Kostenindicatie:</b><br/>
-            {{ this.deferredMaintenance.costIndication }}
+    <p v-if="currentReport.deferredMaintenance.length == 0">N.v.t.</p>
+    <ul v-else>
+        <li v-for="(item, index) in currentReport.deferredMaintenance" v-bind:key="index">
+            <b>Gemeld op:</b>
+            <p>{{ formatDate(item.createdAt) }}</p>
+            <b>Locatie:</b>
+            <p>{{ item.location }}</p>
+            <b>Type onderhoud:</b>
+            <p>{{ translateTypeMaintenance(item.typeMaintenance) }}</p>
+            <b>Acute actie vereist:</b>
+            <p>{{ item.urgentActionRequired ? 'Ja' : 'Nee' }}</p>
         </li>
     </ul>
 </template>
 <script>
     import translateFields from '@/mixins/components/executedreports/translateFields'
+    import dateFormatter from '@/mixins/dates/dateFormatter'
     export default 
     {
         props: [
-            'deferredMaintenance'
+            'currentReport'
         ],
         mixins: [
+            dateFormatter,
             translateFields
         ]
     }

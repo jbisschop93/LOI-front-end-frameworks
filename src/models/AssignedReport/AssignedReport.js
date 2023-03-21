@@ -22,7 +22,7 @@ export default class AssignedReport extends BaseModel
             this.deferredMaintenance.push(new AssignedReportDeferredMaintenanceModel(data))
         });
 
-        this.Address = new AssignedReportAddressModel(args.address)
+        this.address = new AssignedReportAddressModel(args.address)
 
         this.modifications = new Array();
         args.modifications.map((data) => {

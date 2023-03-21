@@ -7,11 +7,10 @@ export default class AssignedReportAddress extends BaseModel
         super(args);
         
         //Add model fields
-        this.location = args.location ?? null; 
-        this.isNew = args.isNew ?? null; 
-        this.typeDamage = args.typeDamage ?? null; 
-        this.date = args.date ?? null; 
-        this.urgentActionRequired = args.urgentActionRequired ?? null; 
-        this.description = args.description ?? null; 
+        this.houseNumber = args.houseNumber ?? null
+        this.houseNumberAddon = args.houseNumberAddon ?? null
+        this.street = args.street ?? null
+        this.place = args.place ?? null
+        this.zipCode = args.zipCode ?? null
     }
 }
