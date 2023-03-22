@@ -1,5 +1,5 @@
 <template>
-    <div class="panel h-100 p-5" @click="handleButtonClick">
+    <div class="panel h-100 p-5">
         <router-link :to="to">
             <div class="icon">
                 <font-awesome-icon :icon="icon" size="4x" />
@@ -16,12 +16,7 @@
         'icon',
         'title',
         'to'
-    ],
-    methods: {
-        handleButtonClick(){
-            alert(this.title + ' is aangeklikt!');
-        }
-    }
+    ]
   }
   </script>
   
@@ -42,6 +37,12 @@
     h2 
     {
         font-size:14px;
+    }
+
+    .panel a 
+    {
+        color:#FFFFFF;
+        text-decoration:none;
     }
 
     @media(min-width: 768px){

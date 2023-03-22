@@ -6,21 +6,17 @@
         <HomeButton :icon="item.icon" :title="item.title" :to="item.to"/>
       </div>
     </div>
-    <!-- Tijdelijk! -->
-    <ExecutedReports/>
     <div class="py-4"></div>
   </div>
 </template>
 
 <script>
 import HomeButton from '@/components/template/buttons/HomeButton.vue'
-import ExecutedReports from '@/components/data/executedreports/ExecutedReports.vue';
 
 export default {
-  name: 'HomePage',
+  name: 'PageHome',
   components: {
-    HomeButton,
-    ExecutedReports
+    HomeButton
   },
   props: [
     'menuItems'

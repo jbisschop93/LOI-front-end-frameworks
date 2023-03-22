@@ -1,18 +1,22 @@
 //Add router
 import { createRouter, createWebHistory } from 'vue-router'
-import HomePage from '@/components/pages/HomePage'
-import ExamplePage from '@/components/pages/ExamplePage'
+import PageHome from '@/components/pages/PageHome'
+import PageExecutedReports from '@/components/pages/PageExecutedReports'
+import PageExecutedReport from '@/components/pages/PageExecutedReport'
 
 const routes = [
     {
         path: '/',
-        name: 'home',
-        component: HomePage
+        component: PageHome
     },
     {
-        path: '/example',
-        name: 'example',
-        component: ExamplePage
+        path: '/uitgevoerde-rapportages',
+        component: PageExecutedReports
+    },
+    {
+        path: '/uitgevoerde-rapportages/:id',
+        component: PageExecutedReport,
+        props: true
     }
 ];
 

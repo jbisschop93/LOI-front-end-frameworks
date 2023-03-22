@@ -24,7 +24,7 @@ export default {
         },
         {
           title: 'Uitgevoerde rapportages',
-          to: 'example',
+          to: 'uitgevoerde-rapportages',
           icon: 'fa-solid fa-clipboard-check'
         },
         {
@@ -51,6 +51,25 @@ export default {
   html 
   {
     min-height: 100%;
+  }
+  h1 
+  {
+    font-size:28px;
+  }
+
+  h2 
+  {
+    font-size:24px;
+  }
+
+  h3 
+  {
+    font-size:22px;
+  }
+
+  h4 
+  {
+    font-size:20px;
   }
   .v-application 
   {
