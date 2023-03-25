@@ -34,8 +34,10 @@
                 alert('Deze functie is niet beschikbaar in het prototype!');
             },
 
-            handleLogin()
+            handleLogin(e)
             {
+                e.preventDefault()
+                
                 const frmElement = document.getElementById('loginFrm');
                 const username = frmElement.querySelector('input[name=username]').value;
                 const password = frmElement.querySelector('input[name=password]').value;

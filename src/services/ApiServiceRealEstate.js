@@ -3,6 +3,7 @@ import RealEstateApi from '@/apis/RealEstateApi';
 
 //Models
 import AssignedReport from '@/models/AssignedReport/AssignedReport'
+import UserModel from '@/models/Users/UserModel'
 
 export default
 {
@@ -32,7 +33,22 @@ export default
 
     async userLogin(username, password) 
     {
-        console.log(username)
-        console.log(password)
+        const response = await this.API.call('users/'+username).then((object) => 
+        {
+            let user = new UserModel(object)
+            if(user.userName == username)
+            {
+                if(user.tmpPassword == password)
+                {
+                    this.$store.commit('setUser', user)
+                } else {
+                    alert('Het door u ingevulde wachtwoord komt niet overeen bij deze gebruikersnaam!')
+                }
+            } else {
+                console.log(user)
+                alert('De door u ingevulde gebruikersnaam is niet bij ons bekend!')
+            }
+        });
+        return response;
     }
 }

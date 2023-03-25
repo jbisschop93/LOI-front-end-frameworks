@@ -4,14 +4,18 @@ export default createStore({
     state: {
         counter: 0,
         user: {
+            is2FAAuthenthicated: false,
             isLogged: false,
+            currentStep: 'login', //login, authenthicated,
             username: ''
         }
     },
     mutations:{
-        INCREMENT(state, payload)
+        SETUSER(state, userName)
         {
-            state.counter += payload
+            state.user.isAuthenthicated = true
+            state.user.isLogged = true
+            state.user.userName = userName
         },
         RESET(state)
         {
@@ -19,9 +23,11 @@ export default createStore({
         }
     },
     actions: {
-        increment(context, value)
+        setUser(context, user)
         {
-            context.commit('INCREMENT', value)
+            context.commit('SETUSER', {
+                userName: user.userName
+            })
         },
         reset(context)
         {

@@ -62,10 +62,10 @@ const router = createRouter({
 
 //Guard for secured pages
 router.beforeEach((to) => {
-    if(store.state.user.isLogged == false && to.meta.requiresAuth)
+    if(store.state.user.is2FAAuthenthicated == false && to.meta.requiresAuth)
     {
         return { path: '/inloggen' }
-    } else if(store.state.user.isLogged == true && to.meta.hideForAuth)
+    } else if(store.state.user.is2FAAuthenthicated == true && to.meta.hideForAuth)
     {
         return { path: '/' }
     }
