@@ -32,6 +32,7 @@ export default
 
     async userLogin(username, password) 
     {
-        
+        console.log(username)
+        console.log(password)
     }
 }

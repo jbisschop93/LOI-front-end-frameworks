@@ -2,7 +2,11 @@ import { createStore } from 'vuex'
 
 export default createStore({
     state: {
-        counter: 0
+        counter: 0,
+        user: {
+            isLogged: false,
+            username: ''
+        }
     },
     mutations:{
         INCREMENT(state, payload)

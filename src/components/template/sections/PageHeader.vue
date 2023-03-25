@@ -5,7 +5,7 @@
                 <img class="logo" :src="require('@/assets/logo.png')"/> 
             </router-link>
             <v-spacer></v-spacer>
-            <v-app-bar-nav-icon class="navtoggle" @click.stop="navbarVisible = !navbarVisible"></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon v-if="this.$store.state.user.isLogged" class="navtoggle" @click.stop="navbarVisible = !navbarVisible"></v-app-bar-nav-icon>
         </v-toolbar>
         <v-navigation-drawer
             v-model="navbarVisible"

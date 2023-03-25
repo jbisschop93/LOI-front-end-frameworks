@@ -1,5 +1,5 @@
 <template>
-    <v-bottom-navigation>
+    <v-bottom-navigation v-if="this.$store.state.user.isLogged">
         <v-btn v-for="item in menuItems" v-bind:key="item" :to="item.to">
             <font-awesome-icon :icon="item.icon" size="2x"/>
         </v-btn>
