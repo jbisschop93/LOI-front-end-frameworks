@@ -31,26 +31,6 @@
             "modifications": [ ]
         },
         {
-            "id": 256215,
-            "createdAt": "2023-03-12",
-            "inspectedAt": "",
-            "status": "assigned",
-            "title": "Jaarlijkse inspectie 2024",
-            "address": {
-                "id": 89,
-                "createdAt": "2018-11-01",
-                "street": "Burgemeester van Bakkeneslaan",
-                "houseNumber": 40,
-                "houseNumberAddon": "",
-                "zipCode": "9665GX",
-                "place": "Oude Pekela"
-            },
-            "recordedDamages": [ ],
-            "deferredMaintenance": [ ],
-            "technicalInstallations": [ ],
-            "modifications": [ ]
-        },
-        {
             "id": 256265,
             "createdAt": "2023-03-12",
             "inspectedAt": "",
@@ -79,28 +59,6 @@
                     "description": "Lekkage riolering onder toilet"
                 }
             ],
-            "deferredMaintenance": [ ],
-            "technicalInstallations": [ ],
-            "modifications": [ ]
-        },
-        {
-            "id": 256022,
-            "createdAt": "2023-01-05",
-            "inspectedAt": "",
-            "status": "assigned",
-            "title": "Jaarlijkse inspectie 2024",
-            "address": {
-                "id": 128,
-                "createdAt": "2018-05-22",
-                "street": "Daltonlaan",
-                "houseNumber": 100,
-                "houseNumberAddon": "",
-                "zipCode": "3584BJ",
-                "place": "Utrecht"
-            },
-            
-            
-            "recordedDamages": [ ],
             "deferredMaintenance": [ ],
             "technicalInstallations": [ ],
             "modifications": [ ]
@@ -256,40 +214,6 @@
             "deferredMaintenance": [],
             "technicalInstallations": [],
             "modifications": []
-        },
-        {
-            "id": 222110,
-            "createdAt": "2021-05-01",
-            "inspectedAt": "2021-06-15",
-            "status": "completed",
-            "title": "Nieuwe keuken",
-            "address": {
-                "id": 89,
-                "createdAt": "2018-11-01",
-                "street": "Burgemeester van Bakkeneslaan",
-                "houseNumber": 40,
-                "houseNumberAddon": "",
-                "zipCode": "9665GX",
-                "place": "Oude Pekela"
-            },
-            
-            "recordedDamages": [],
-            "deferredMaintenance": [],
-            "technicalInstallations": [],
-            "modifications": [
-                {
-                    "id": 216102,
-                    "createdAt": "2021-06-15",
-                    "updatedAt": "",
-                    "isNew": true,
-                    "previousDocumentation": "",
-                    "location": "Keuken",
-                    "executedBy": "Tenant",
-                    "description": "Klant heeft na overleg zelfstandig een nieuwe keuken geinstalleerd, deze moest echter na installatie nog worden goedgekeurd.",
-                    "actionRequired": "accept",
-                    "extraInformation": "Installatiewerk voldoet aan de eisen."
-                }
-            ]
         },
         {
             "id": 2221005,
