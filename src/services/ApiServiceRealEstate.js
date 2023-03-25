@@ -28,5 +28,10 @@ export default
         returnObj = await this.API.call('reportList/'+id)
 
         return new AssignedReport(returnObj)
+    },
+
+    async userLogin(username, password) 
+    {
+        
     }
 }
