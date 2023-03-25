@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PageHome from '@/components/pages/PageHome'
 import PageExecutedReports from '@/components/pages/PageExecutedReports'
 import PageExecutedReport from '@/components/pages/PageExecutedReport'
+import PageAssignedReports from '@/components/pages/PageAssignedReports'
+import PageAssignedReport from '@/components/pages/PageAssignedReport'
 
 const routes = [
     {
@@ -16,6 +18,15 @@ const routes = [
     {
         path: '/uitgevoerde-rapportages/:id',
         component: PageExecutedReport,
+        props: true
+    },
+    {
+        path: '/toegewezen-rapportages',
+        component: PageAssignedReports
+    },
+    {
+        path: '/toegewezen-rapportages/:id',
+        component: PageAssignedReport,
         props: true
     }
 ];

@@ -34,7 +34,7 @@
     </div>
 </template>
 <script>
-import dateFormatter from '@/mixins/dates/dateFormatter';
+import dateFormatter from '@/mixins/dates/dateFormatter'; 
 import DeferredMaintenanceViewer from '@/components/data/executedreports/details/DeferredMaintenanceViewer.vue';
 import RecordedDamagesViewer from '@/components/data/executedreports/details/RecordedDamagesViewer.vue'; 
 import TechnicalInstallationsViewer from '@/components/data/executedreports/details/TechnicalInstallationsViewer.vue';
