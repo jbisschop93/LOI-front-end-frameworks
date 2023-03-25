@@ -19,7 +19,7 @@ export default {
       menuItems: [
         {
           title: 'Toegewezen rapportages',
-          to: 'example',
+          to: 'toegewezen-rapportages',
           icon: 'fa-solid fa-list-check'
         },
         {

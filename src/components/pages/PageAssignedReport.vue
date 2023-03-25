@@ -1,5 +1,5 @@
 <template>
-    <PreviousPageBar :pageTitle="pageTitle" previousRoute="/uitgevoerde-rapportages"/>
+    <PreviousPageBar :pageTitle="pageTitle" previousRoute="/toegewezen-rapportages"/>
     <div class="container pt-2">
         <ExecutedReport :currentReport="currentReport"/>
         <div class="py-4"></div>
@@ -12,7 +12,7 @@
   import ExecutedReport from '@/components/data/executedreports/ExecutedReport.vue'; 
   
   export default {
-    name: 'PageExecutedReport',
+    name: 'PageAssignedReport',
     data: () => {
         return {
             'currentReport': null

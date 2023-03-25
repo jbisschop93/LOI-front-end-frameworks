@@ -1,7 +1,7 @@
 <template>
-    <PreviousPageBar pageTitle="Uitgevoerde rapportages"/>
+    <PreviousPageBar pageTitle="Toegewezen rapportages"/>
     <div class="container pt-2">
-        <ReportsOverview mode="executed"/>
+        <ReportsOverview mode="assigned"/>
         <div class="py-4"></div>
     </div>
   </template>
@@ -13,7 +13,7 @@
   export default {
     name: 'PageExecutedReports',
     components: {
-      ReportsOverview,
+        ReportsOverview,
       PreviousPageBar
     },
     props: [
