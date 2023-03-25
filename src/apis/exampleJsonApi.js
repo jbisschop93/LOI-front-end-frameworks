@@ -1,4 +1,4 @@
-import dummyData from '@/apis/dummy.json'
+import dummyData from '@/../db.json'
 
 export default class exampleJsonApi
 {
