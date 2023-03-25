@@ -5,17 +5,17 @@ export default createStore({
         counter: 0,
         user: {
             is2FAAuthenthicated: false,
-            isLogged: false,
+            isLogged: true,
             currentStep: 'login', //login, authenthicated,
             username: ''
         }
     },
     mutations:{
-        SETUSER(state, userName)
+        SETUSER(state, userObject)
         {
-            state.user.isAuthenthicated = true
+            state.user.is2FAAuthenthicated = true
             state.user.isLogged = true
-            state.user.userName = userName
+            state.user.userName = userObject.userName
         },
         RESET(state)
         {
@@ -23,11 +23,9 @@ export default createStore({
         }
     },
     actions: {
-        setUser(context, user)
+        userLoggedIn(context, userObject)
         {
-            context.commit('SETUSER', {
-                userName: user.userName
-            })
+            context.commit('SETUSER', userObject)
         },
         reset(context)
         {

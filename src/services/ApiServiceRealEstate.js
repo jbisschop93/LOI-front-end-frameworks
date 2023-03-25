@@ -40,13 +40,12 @@ export default
             {
                 if(user.tmpPassword == password)
                 {
-                    this.$store.commit('setUser', user)
+                    return user
                 } else {
-                    alert('Het door u ingevulde wachtwoord komt niet overeen bij deze gebruikersnaam!')
+                    return false
                 }
             } else {
-                console.log(user)
-                alert('De door u ingevulde gebruikersnaam is niet bij ons bekend!')
+                return false
             }
         });
         return response;

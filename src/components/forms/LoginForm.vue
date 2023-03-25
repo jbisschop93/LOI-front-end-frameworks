@@ -15,7 +15,7 @@
         <v-btn @click="notInPrototype">
             Wachtwoord vergeten?
         </v-btn>
-        <v-btn @click="handleLogin" class="float-right" color="primary">
+        <v-btn @click="handleLoginButton" class="float-right" color="primary">
             Inloggen
         </v-btn>
     </form>
@@ -34,7 +34,31 @@
                 alert('Deze functie is niet beschikbaar in het prototype!');
             },
 
-            handleLogin(e)
+            async doLogin(username, password)
+            {
+                return await ApiServiceRealEstate.userLogin(username, password).then((response) => {
+                    if(response.userName)
+                    {
+                        //Store user object in local storage
+                        localStorage.setItem('userObject', JSON.stringify(response))
+
+                        //Dispatch login event
+                        this.$store.dispatch({
+                            type: 'userLoggedIn',
+                            userObject: response     
+                        }).then(() => {
+                            //Navigate to main page
+                            this.$router.push({
+                                path: '/'
+                            })
+                            return true
+                        })
+                    }
+                    return false
+                })
+            },
+
+            handleLoginButton(e)
             {
                 e.preventDefault()
                 
@@ -42,7 +66,31 @@
                 const username = frmElement.querySelector('input[name=username]').value;
                 const password = frmElement.querySelector('input[name=password]').value;
 
-                ApiServiceRealEstate.userLogin(username, password)
+                this.doLogin(username, password)
+            }
+        },
+
+        //Autologin (from localstorage)
+        created(){
+            if(localStorage.getItem('userObject') != null)
+            {
+                try 
+                {
+                    //Retrieve saved user object
+                    const userObj = JSON.parse(localStorage.getItem('userObject'))
+
+                    //Try automaticly logging in again
+                    this.doLogin(userObj.userName, userObj.tmpPassword).then(response => {
+                        if(response == false)
+                        {
+                            //Delete localStorage item when invalid
+                            localStorage.removeItem('userObject')
+                        }
+                    })
+                } catch (err) {
+                    console.log('Tried logging in, but failed')
+                    console.log(err)
+                }
             }
         }
     }
