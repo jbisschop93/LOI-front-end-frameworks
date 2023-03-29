@@ -20,7 +20,8 @@ import {
   faClipboardCheck,
   faGraduationCap,
   faGears,
-  faListCheck
+  faListCheck,
+  faRightFromBracket
 } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
@@ -28,6 +29,7 @@ library.add(faClipboardCheck)
 library.add(faListCheck)
 library.add(faGraduationCap)
 library.add(faGears)
+library.add(faRightFromBracket)
 
 loadFonts()
 

@@ -31,7 +31,7 @@ export default
         return new AssignedReport(returnObj)
     },
 
-    async userLogin(username, password) 
+    async verifyCredentials(username, password) 
     {
         const response = await this.API.call('users/'+username).then((object) => 
         {
@@ -39,6 +39,26 @@ export default
             if(user.userName == username)
             {
                 if(user.tmpPassword == password)
+                {
+                    return user
+                } else {
+                    return false
+                }
+            } else {
+                return false
+            }
+        });
+        return response;
+    },
+
+    async verifyLogin(username, code)
+    {
+        const response = await this.API.call('users/'+username).then((object) => 
+        {
+            let user = new UserModel(object)
+            if(user.userName == username)
+            {
+                if(user.tmp2FA == code)
                 {
                     return user
                 } else {

@@ -36,6 +36,11 @@ export default {
           title: 'Instellingen',
           to: 'example',
           icon: 'fa-solid fa-gears'
+        },
+        {
+          title: 'Uitloggen',
+          to: 'uitloggen',
+          icon: 'fa fa-right-from-bracket'
         }
       ]
     }

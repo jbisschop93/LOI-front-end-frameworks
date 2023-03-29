@@ -2,16 +2,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import PageHome from '@/components/pages/PageHome'
 import PageLogin from '@/components/pages/PageLogin'
+import PageLoginStep2 from '@/components/pages/PageLoginStep2'
 import PageExecutedReports from '@/components/pages/PageExecutedReports'
 import PageExecutedReport from '@/components/pages/PageExecutedReport'
 import PageAssignedReports from '@/components/pages/PageAssignedReports'
 import PageAssignedReport from '@/components/pages/PageAssignedReport'
+import PageLogOut from '@/components/pages/PageLogOut'
 import store from '@/store'
 
 const routes = [
     {
         path: '/inloggen',
         component: PageLogin,
+        meta: {
+            hideForAuth: true
+        }
+    },
+    {
+        path: '/inloggen-stap2',
+        component: PageLoginStep2,
         meta: {
             hideForAuth: true
         }
@@ -52,6 +61,13 @@ const routes = [
         meta: {
             requiresAuth: true
         }
+    },
+    {
+        path: '/uitloggen',
+        component: PageLogOut,
+        meta: {
+            requiresAuth: true
+        }
     }
 ];
 
@@ -62,11 +78,24 @@ const router = createRouter({
 
 //Guard for secured pages
 router.beforeEach((to) => {
-    if(store.state.user.is2FAAuthenthicated == false && to.meta.requiresAuth)
+    if(store.state.user.is2FAAuthenthicated == false)
     {
-        return { path: '/inloggen' }
+        console.log('trigger1: '+to.path)
+        console.log(store.state.user)
+        //User not fully logged in using 2 factor authenthication
+        if(store.state.user.isLogged == true)
+        {
+            //Redirect to 2FA page if needed
+            if(to.path != '/inloggen-stap2')
+                return { path: '/inloggen-stap2' }
+        } else {
+            //Redirect to login page if needed
+            if(to.path != '/inloggen')
+                return { path: '/inloggen' }
+        }
     } else if(store.state.user.is2FAAuthenthicated == true && to.meta.hideForAuth)
     {
+        console.log('trigger4')
         return { path: '/' }
     }
 });
