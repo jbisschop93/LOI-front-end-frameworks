@@ -1,13 +1,13 @@
 <template>
-  <div class="container">
+  <v-container>
     <h1>Direct naar:</h1>
-    <div class="row">
-      <div class="col-6 homebuttoncontainer" v-for="(item, index) in menuItems" v-bind:key="index">
+    <v-row>
+      <v-col class="col-6 homebuttoncontainer" v-for="(item, index) in menuItems" v-bind:key="index">
         <HomeButton :icon="item.icon" :title="item.title" :to="item.to"/>
-      </div>
-    </div>
+      </v-col>
+    </v-row>
     <div class="py-4"></div>
-  </div>
+  </v-container>
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.container, .container h1
+.v-container, .container h1
 {
   color:#FFFFFF;
 }

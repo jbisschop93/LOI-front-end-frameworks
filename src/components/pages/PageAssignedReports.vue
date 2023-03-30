@@ -1,9 +1,9 @@
 <template>
-    <PreviousPageBar pageTitle="Toegewezen rapportages"/>
-    <div class="container pt-2">
+    <PreviousPageBar pageTitle="Toegewezen rapportages"  previousRoute="/"/>
+    <v-container class="pt-2">
         <ReportsOverview mode="assigned"/>
         <div class="py-4"></div>
-    </div>
+    </v-container>
   </template>
   
   <script>
@@ -24,7 +24,7 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
-  .container, .container h1
+  .v-container, .container h1
   {
     color:#FFFFFF;
   }

@@ -1,5 +1,5 @@
 <template>
-    <div class="container pt-5">
+    <v-container class="pt-5">
       <div class="row justify-content-center">
         <div class="col-6">
             <div class="card p-3">
@@ -9,7 +9,7 @@
         </div>
       </div>
       <div class="py-4"></div>
-    </div>
+    </v-container>
   </template>
   
   <script>

@@ -22,7 +22,17 @@ export default {
   computed: {
     previousPage()
     {
-      return this.previousRoute ?? '/'
+      if(this.previousRoute)
+      {
+        return this.previousRoute
+      } else {
+        return this.hasHistory() ? this.$router.options.history.state.back : '/'
+      }
+    }
+  },
+  methods: {
+    hasHistory () { 
+      return window.history.length > 2 
     }
   }
 }

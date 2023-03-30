@@ -62,6 +62,11 @@ export default
         }).catch(() => alert('We konden op dit moment helaas geen verbinding maken met de server, probeert u het later nog een keer.'))
     },
 
+    currentUser()
+    {
+        return store.state.user
+    },
+
     logOut()
     {
         //First remove local storage (if set)

@@ -7,6 +7,8 @@ import PageExecutedReports from '@/components/pages/PageExecutedReports'
 import PageExecutedReport from '@/components/pages/PageExecutedReport'
 import PageAssignedReports from '@/components/pages/PageAssignedReports'
 import PageAssignedReport from '@/components/pages/PageAssignedReport'
+import PageEditReport from '@/components/pages/PageEditReport'
+import PageSettings from '@/components/pages/PageSettings'
 import PageLogOut from '@/components/pages/PageLogOut'
 import store from '@/store'
 
@@ -58,6 +60,21 @@ const routes = [
         path: '/toegewezen-rapportages/:id',
         component: PageAssignedReport,
         props: true,
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/wijzig-rapportage/:id',
+        component: PageEditReport,
+        props: true, 
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
+        path: '/instellingen',
+        component: PageSettings,
         meta: {
             requiresAuth: true
         }

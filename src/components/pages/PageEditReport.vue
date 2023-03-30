@@ -1,41 +1,36 @@
 <template>
-    <PreviousPageBar :pageTitle="pageTitle" previousRoute="/toegewezen-rapportages"/>
-    <v-container class="pt-2">
-      <v-card class="p-2">
-            <v-row>
-              <v-col xs="12" md="8">
+    <PreviousPageBar :pageTitle="pageTitle"/>
+    <div class="container pt-2">
+        <div class="card p-2">
+            <div class="row">
+              <div class="col-12 col-md-8">
                 <h1>{{ currentReport.title }}</h1>
-              </v-col>
-              <v-col xs="12" md="4" class="md-text-right">
-                Beheer: 
-                <v-btn :to="editLink" color="primary">Rapport in behandeling nemen</v-btn>
-              </v-col>
-            </v-row>
+              </div>
+            </div>
             
             <div class="pt-3">
-              <ReportViewer :currentReport="currentReport"/>
+              <ReportEditor :currentReport="currentReport"/>
             </div>
-          </v-card>
-      </v-container>
+        </div>
+        <div class="py-4"></div>
+    </div>
   </template>
   
-  <script> 
+  <script>
   import AssignedReportsService from '@/services/ApiServiceRealEstate'
   import PreviousPageBar from '@/components/template/sections/PreviousPageBar'
-  import ReportViewer from '@/components/data/executedreports/ReportViewer.vue'; 
+  import ReportEditor from '@/components/data/executedreports/ReportEditor.vue'; 
   
-  export default {
-    name: 'PageAssignedReport',
+  export default { 
+    name: 'PageExecutedReport',
     data: () => {
         return {
-            'currentReport': {
-              'title': 'Bezig met ophalen...'
-            }
+            'currentReport': null
         }
     },
     components: {
-      ReportViewer,
-      PreviousPageBar
+        ReportEditor,
+        PreviousPageBar
     },
     props: [
       'menuItems',
@@ -61,7 +56,7 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
-  .v-container, .container h1
+  .container, .container h1
   {
     color:#FFFFFF;
   }

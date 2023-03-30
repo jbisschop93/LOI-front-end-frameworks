@@ -34,7 +34,7 @@ export default {
         },
         {
           title: 'Instellingen',
-          to: 'example',
+          to: '/instellingen',
           icon: 'fa-solid fa-gears'
         },
         {

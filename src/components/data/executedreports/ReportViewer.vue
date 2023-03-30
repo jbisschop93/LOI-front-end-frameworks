@@ -1,7 +1,5 @@
 <template>
-    <div v-if="this.currentReport !== null" class="card p-2">
-        <h1>{{ currentReport.title }}</h1>
-
+    <div v-if="this.currentReport !== null">
         <b>Aangemaakt op:</b>
         <p>{{ formatDate(currentReport.createdAt) }}</p>
 
@@ -63,10 +61,5 @@ table tr td
 {
     vertical-align: top;
     padding:5px;
-}
-
-.card 
-{
-    color:#000
 }
 </style>
