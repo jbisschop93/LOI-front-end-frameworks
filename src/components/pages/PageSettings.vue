@@ -1,6 +1,7 @@
 <template>
     <the-previous-page-bar 
-        pageTitle="Instellingen"
+        page-title="Instellingen" 
+        previous-route="/"
     />
     <v-container>
         <v-card>

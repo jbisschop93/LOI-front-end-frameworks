@@ -4,7 +4,7 @@
             <router-link 
                 to="/"
             >
-                <img class="logo" :src="require('@/assets/logo.png')"/> 
+                <img height="40px" class="logo" :src="require('@/assets/logo.png')"/> 
             </router-link>
             <v-spacer></v-spacer>
             <v-app-bar-nav-icon 
@@ -14,8 +14,8 @@
         </v-toolbar>
         <v-navigation-drawer
             v-model="navbarVisible"
-            location="bottom"
-            temporary
+            location="left"
+            temporary  
         >
             <v-list 
                 v-for="item in menuItems" 
@@ -70,5 +70,10 @@ export default {
     .navtoggle
     {
         color:#FFFFFF
+    } 
+
+    .v-navigation-drawer__content
+    {
+        overflow-y:scroll !important;
     }
 </style>

@@ -3,15 +3,10 @@
             <v-list>
                 <v-list-item 
                     v-for="(report, index) in sortedReportsByMode" 
-                    v-bind:key="index"
+                    v-bind:key="index" 
+                    :to="routeExecutedReportDetail(report.id)"
                 >
-                    <v-btn 
-                        class="d-flex justify-content-start" 
-                        block 
-                        :to="routeExecutedReportDetail(report.id)"
-                    >
                         {{ $_dateFormatter_formatDate(report.createdAt) }}: {{ report.title }}
-                    </v-btn>
                 </v-list-item>
             </v-list>
         </v-card>

@@ -1,16 +1,14 @@
 <template>
     <v-bottom-navigation 
-        v-if="this.$store.state.user.is2FAAuthenthicated"
+        v-if="this.$store.state.user.is2FAAuthenthicated && this.$route.path != '/kennisbase'" 
     >
-        <v-btn 
-            v-for="item in menuItems" 
-            v-bind:key="item" 
-            :to="item.to"
-        >
+        <v-btn to="/kennisbase">
             <font-awesome-icon 
-                :icon="item.icon" 
-                size="2x"
+                icon="fa fa-circle-question" 
+                size="2x" 
+                class="helpicon" 
             />
+            Hulp nodig?
         </v-btn>
     </v-bottom-navigation>
 </template>
@@ -25,8 +23,8 @@ export default {
 </script>
 
 <style scoped>
-    .v-bottom-navigation .v-bottom-navigation__content > .v-btn 
+    .helpicon
     {
-        max-width:85px;
+        color:#007eff
     }
 </style>

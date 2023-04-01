@@ -3,29 +3,39 @@
         <v-text-field 
             name="username"
             label="Gebruikersnaam"
-            placeholder="demo"
+            placeholder="Demo"
             type="text"  
             required
         ></v-text-field>
         <v-text-field 
             name="password"
             label="Wachtwoord"
-            placeholder="demo123"
+            placeholder="Demo123"
             type="password" 
             required
         ></v-text-field>
-        <v-btn 
-            @click="notInPrototype"
-        >
-            Wachtwoord vergeten?
-        </v-btn>
-        <v-btn 
-            @click="handleLoginButton" 
-            class="float-right" 
-            color="primary"
-        >
-            Inloggen
-        </v-btn>
+        <v-row>
+            <v-col cols="12" md="6">
+                <v-btn 
+                    @click="notInPrototype"
+                    class="mt-2" 
+                    variant="text" 
+                    block
+                >
+                    Wachtwoord vergeten?
+                </v-btn>
+            </v-col>
+            <v-col cols="12" md="6">
+                <v-btn 
+                    @click="handleLoginButton" 
+                    class="float-right mt-2" 
+                    color="primary" 
+                    block
+                >
+                    Inloggen
+                </v-btn>
+            </v-col>
+        </v-row>
     </form>
 </template>
 <script>

@@ -21,7 +21,8 @@ import {
   faGraduationCap,
   faGears,
   faListCheck,
-  faRightFromBracket
+  faRightFromBracket,
+  faCircleQuestion
 } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
@@ -30,6 +31,7 @@ library.add(faListCheck)
 library.add(faGraduationCap)
 library.add(faGears)
 library.add(faRightFromBracket)
+library.add(faCircleQuestion)
 
 loadFonts()
 

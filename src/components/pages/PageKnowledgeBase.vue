@@ -1,7 +1,7 @@
 <template>
     <the-previous-page-bar 
       page-title="Kennisbase" 
-      previous-route="/"
+      :previous-route="previousRoute"
     />
     <v-container 
       class="pt-2"
@@ -10,8 +10,8 @@
           v-for="(FaqCat) in FaqItems" 
           v-bind:key="FaqCat">
           <v-card-title>{{ FaqCat.title }}</v-card-title>
-          <v-list >
-            <knowledge-base-item 
+          <v-list>
+            <knowledge-base-list-item 
               v-for="(item) in FaqCat.questions" 
               v-bind:key="item"
               :question="item.question"
@@ -19,13 +19,46 @@
               />
             </v-list>
         </v-card>
-        <div class="py-4"></div>
+        
+        <v-card 
+          class="mt-4"
+        >
+        <v-card-title>Komt u er niet uit?</v-card-title>
+        <v-card-text>
+          <p>Mocht u tegen problemen aanlopen of iets niet begrijpen dan kunt u ten alle tijden contact opnemen met het hoofdkantoor.</p>
+          <address>
+            <b>Real Estate Care:</b><br/>
+            Leidsedreef 2<br/>
+            2352 BA<br/>
+            Leiderdorp<br/>
+            0597 - 12 34 56
+          </address>
+
+          <b>Of:</b><br/>
+          <v-btn 
+            color="primary"
+            @click="notInPrototype" 
+            class="mt-2"
+          >
+            Stuur ons een e-mail
+          </v-btn> 
+          &nbsp;
+          
+          <v-btn 
+            color="primary"
+            @click="notInPrototype" 
+            class="mt-2"
+          >
+            Open live chat
+          </v-btn>
+        </v-card-text>
+      </v-card>
     </v-container>
   </template>
   
   <script>
     import ThePreviousPageBar from '@/components/template/sections/ThePreviousPageBar.vue';
-    import KnowledgeBaseItem from '@/components/data/knowledgebase/KnowledgeBaseItem.vue';
+    import KnowledgeBaseListItem from '@/components/data/knowledgebase/KnowledgeBaseListItem.vue';
   
     export default {
         data(){
@@ -35,7 +68,7 @@
                 'title': 'Toegewezen rapportages',
                 'questions': [
                   {
-                    'question': 'Ik heb een vraag over een toegewezen rapportage',
+                    'question': 'Ik heb een vraag over een toegewezen rapportage.',
                     'answer': 'De rapportages worden aangemaakt door de servicedeskmedewerkers van Real Estate Care.Mocht u hier inhoudelijk vragen over hebben dan kunt u het beste met het hoofdkantoor bellen (0597-123456): houd hiervoor het referentienummer van het rapport bij de hand.'
                   },
                   {
@@ -75,9 +108,21 @@
         },
         name: 'PageHome',
         components: {
-            KnowledgeBaseItem,
+            KnowledgeBaseListItem,
             ThePreviousPageBar
         },
+        methods: {
+          notInPrototype()
+          {
+              alert('Deze functie is niet beschikbaar in het prototype!');
+          },
+        },
+        computed: {
+          previousRoute()
+          {
+            return this.$router.options.history.state.back ?? '/'
+          }
+        },  
         props: [
             'menuItems'
         ]

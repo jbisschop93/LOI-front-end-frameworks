@@ -13,7 +13,7 @@
           >
             <h1>U bent nog niet ingelogd!</h1>
             <p>Vul hieronder uw gebruikersnaam- en wachtwoord in om te beginnen.</p>
-            <p>In de demo applicatie kunt u inloggen met "demo" (gebruikersnaam) / "demo123" (wachtwoord).</p>
+            <p>In de demo applicatie kunt u inloggen met "Demo" (gebruikersnaam) / "Demo123" (wachtwoord).</p>
             
             <login-form/>
           </v-card>

@@ -50,3 +50,15 @@ In production the API should not be able to return any user info without proper 
 - Component properties are not specified as this is a prototype, these should have proper (type) validation combined in production.
 
 - Inspection technical installation viewer component, or API should validate URL for 'test procedure' link before putting its content on the webpage (these links could contain javascript: links for example, injecting code into the users page).
+
+## Usability
+Please note that this is a prototype only, the final version should have:
+- A tutorial mode, which starts after the first login
+- Proper error handling with proper message dialogs (no alert boxes)
+- Proper API error handling (in case of a bad internet connection for e.x.)
+- A "Quick support" button showing up a chatbox with direct support
+- A loading icon showing during API requests
+
+### WCAG 2.1:
+- The final version should probably have a "high contrast" mode
+- The final version should be able to scale the contents (larger and smaller)
