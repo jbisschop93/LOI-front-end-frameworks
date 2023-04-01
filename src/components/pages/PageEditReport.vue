@@ -1,16 +1,24 @@
 <template>
-    <PreviousPageBar :pageTitle="pageTitle"/>
-    <v-container class="pt-2">
-      <v-card class="pt-2">
+    <the-previous-page-bar 
+      :page-title="pageTitle"
+    />
+    <v-container 
+      class="pt-2"
+    >
+      <v-card 
+        class="p-2"
+      >
         <h1>{{ pageTitle}}</h1>
-        <ReportEditor :currentReport="currentReport"/>
+        <report-editor 
+          :current-report="currentReport"
+        />
       </v-card>
     </v-container>
   </template>
   
   <script>
   import AssignedReportsService from '@/services/ApiServiceRealEstate'
-  import PreviousPageBar from '@/components/template/sections/PreviousPageBar'
+  import ThePreviousPageBar from '@/components/template/sections/ThePreviousPageBar'
   import ReportEditor from '@/components/data/realestatereports/ReportEditor.vue'; 
   
   export default { 
@@ -22,7 +30,7 @@
     },
     components: {
         ReportEditor,
-        PreviousPageBar
+        ThePreviousPageBar
     },
     props: [
       'menuItems',

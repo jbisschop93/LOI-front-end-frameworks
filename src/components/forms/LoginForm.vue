@@ -14,10 +14,16 @@
             type="password" 
             required
         ></v-text-field>
-        <v-btn @click="notInPrototype">
+        <v-btn 
+            @click="notInPrototype"
+        >
             Wachtwoord vergeten?
         </v-btn>
-        <v-btn @click="handleLoginButton" class="float-right" color="primary">
+        <v-btn 
+            @click="handleLoginButton" 
+            class="float-right" 
+            color="primary"
+        >
             Inloggen
         </v-btn>
     </form>

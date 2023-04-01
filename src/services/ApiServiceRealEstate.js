@@ -2,8 +2,8 @@
 import RealEstateApi from '@/apis/RealEstateApi';
 
 //Models
-import AssignedReport from '@/models/AssignedReport/AssignedReport'
-import UserModel from '@/models/Users/UserModel'
+import AssignedReport from '@/models/assignedreport/AssignedReport'
+import UserModel from '@/models/users/UserModel'
 
 export default
 {

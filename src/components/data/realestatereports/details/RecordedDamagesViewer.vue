@@ -1,6 +1,12 @@
 <template>
-    <p v-if="currentReport.recordedDamages.length == 0">N.v.t.</p>
-    <v-expansion-panels v-else>
+    <p 
+        v-if="currentReport.recordedDamages.length == 0"
+    >
+        N.v.t.
+    </p>
+    <v-expansion-panels 
+        v-else
+    >
       <v-expansion-panel
         v-for="(item, index) in currentReport.recordedDamages" 
         v-bind:key="index"
@@ -8,15 +14,15 @@
       >
             <v-expansion-panel-text>
                 <b>Gemeld op:</b>
-                <p>{{ formatDate(item.createdAt) }}</p>
+                <p>{{ $_dateFormatter_formatDate(item.createdAt) }}</p>
                 <b>Locatie:</b>
                 <p>{{ item.location }}</p>
                 <b>Nieuwe schade:</b>
-                <p>{{ item.isNew }}</p>
+                <p>{{ item.isNew ? 'Ja' : 'N.v.t.' }}</p>
                 <b>Type schade:</b>
-                <p>{{ translateTypeDamage(item.typeDamage) }}</p>
+                <p>{{ $_translateFields_translateTypeDamage(item.typeDamage) }}</p>
                 <b>Datum:</b>
-                <p>{{ formatDate(item.date) }}</p>
+                <p>{{ $_dateFormatter_formatDate(item.date) }}</p>
                 <b>Acute actie vereist:</b>
                 <p>{{ item.urgentActionRequired ? 'Ja' : 'Nee' }}</p>
                 <b>Omschrijving:</b>
@@ -41,7 +47,7 @@
         {
             itemTitle(item) 
             {
-                return this.formatDate(item.createdAt) + ': ' + item.location
+                return this.$_dateFormatter_formatDate(item.createdAt) + ': ' + item.location
             }
         }
     }

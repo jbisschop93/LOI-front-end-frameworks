@@ -1,12 +1,17 @@
 <template>
-    <PreviousPageBar pageTitle="Kennisbase" previousRoute="/"/>
-    <v-container class="pt-2">
+    <the-previous-page-bar 
+      page-title="Kennisbase" 
+      previous-route="/"
+    />
+    <v-container 
+      class="pt-2"
+    >
         <v-card
           v-for="(FaqCat) in FaqItems" 
           v-bind:key="FaqCat">
           <v-card-title>{{ FaqCat.title }}</v-card-title>
           <v-list >
-            <KnowledgeBaseItem 
+            <knowledge-base-item 
               v-for="(item) in FaqCat.questions" 
               v-bind:key="item"
               :question="item.question"
@@ -19,7 +24,7 @@
   </template>
   
   <script>
-    import PreviousPageBar from '@/components/template/sections/PreviousPageBar.vue';
+    import ThePreviousPageBar from '@/components/template/sections/ThePreviousPageBar.vue';
     import KnowledgeBaseItem from '@/components/data/knowledgebase/KnowledgeBaseItem.vue';
   
     export default {
@@ -71,7 +76,7 @@
         name: 'PageHome',
         components: {
             KnowledgeBaseItem,
-            PreviousPageBar
+            ThePreviousPageBar
         },
         props: [
             'menuItems'

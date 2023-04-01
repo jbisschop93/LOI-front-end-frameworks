@@ -1,15 +1,18 @@
 export default
 {
     methods: {
-        translateTypeMaintenance(type)
+        $_translateFields_translateTypeMaintenance(type)
         {
             switch(type)
             {
                 case 'painting':
-                    return 'Schilderwerk';
+                    return 'schilderwerk';
 
                 case 'piping':
                     return 'leidingwerk';
+
+            case 'Woodrot':
+                return 'houtrot'
 
                 //Unknown type, return original value
                 default:
@@ -17,7 +20,7 @@ export default
             }
         },
 
-        translateTypeTechnicalInstallation(type)
+        $_translateFields_translateTypeTechnicalInstallation(type)
         {
             switch(type)
             {
@@ -30,7 +33,7 @@ export default
             }
         },
 
-        translateActionRequired(type)
+        $_translateFields_translateActionRequired(type)
         {
             switch(type)
             {
@@ -46,7 +49,7 @@ export default
             }
         },
 
-        translateExecutedBy(type)
+        $_translateFields_translateExecutedBy(type)
         {
             switch(type)
             {
@@ -59,7 +62,7 @@ export default
             }
         },
 
-        translateTypeDamage(type)
+        $_translateFields_translateTypeDamage(type)
         {
             switch(type)
             {

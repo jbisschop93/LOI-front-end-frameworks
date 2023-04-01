@@ -1,5 +1,9 @@
 <template>
-    <p v-if="currentReport.deferredMaintenance.length == 0">N.v.t.</p>
+    <p 
+        v-if="currentReport.deferredMaintenance.length == 0"
+    >
+        N.v.t.
+    </p>
     <v-expansion-panels v-else>
       <v-expansion-panel
         v-for="(item, index) in currentReport.deferredMaintenance" 
@@ -8,11 +12,11 @@
       >
             <v-expansion-panel-text>
                 <b>Gemeld op:</b>
-                <p>{{ formatDate(item.createdAt) }}</p>
+                <p>{{ $_dateFormatter_formatDate(item.createdAt) }}</p>
                 <b>Locatie:</b>
                 <p>{{ item.location }}</p>
                 <b>Type onderhoud:</b>
-                <p>{{ translateTypeMaintenance(item.typeMaintenance) }}</p>
+                <p>{{ $_translateFields_translateTypeMaintenance(item.typeMaintenance) }}</p>
                 <b>Acute actie vereist:</b>
                 <p>{{ item.urgentActionRequired ? 'Ja' : 'Nee' }}</p>
             </v-expansion-panel-text>
@@ -35,7 +39,7 @@
         {
             itemTitle(item) 
             {
-                return this.formatDate(item.createdAt) + ': ' + item.location
+                return this.$_dateFormatter_formatDate(item.createdAt) + ': ' + item.location
             }
         }
     }

@@ -1,13 +1,19 @@
 <template>
-    <v-container class="pt-5">
-      <div class="row justify-content-center">
-        <div class="col-6">
-            <div class="card p-3">
+    <v-container>
+      <v-row 
+        class="justify-content-center"
+      >
+        <v-col 
+          cols="6"
+        >
+            <v-card 
+              class="p-3"
+            >
                 <h1>Bezig met uitloggen...</h1>
                 <p>Een ogenblik geduld alstublieft.</p>
-            </div>
-        </div>
-      </div>
+            </v-card>
+          </v-col>
+      </v-row>
       <div class="py-4"></div>
     </v-container>
   </template>

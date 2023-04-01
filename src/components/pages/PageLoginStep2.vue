@@ -1,8 +1,16 @@
 <template>
-  <v-container class="pt-5">
-    <v-row class="justify-content-center">
-      <v-col md="6">
-        <v-card class="p-3">
+  <v-container 
+    class="pt-5"
+  >
+    <v-row 
+      class="justify-content-center"
+    >
+      <v-col 
+        md="6"
+      >
+        <v-card 
+          class="p-3"
+        >
           <h1>Welkom terug {{ userName }}</h1>
           <p>We hebben je een SMS gestuurd op het bij ons bekende telefoonnummer, vul hieronder je verificatiecode in om door te gaan:</p>
           <p class="disclaimer">Deze functie word in het prototype gesimuleerd, vul code "1234" in om verder te gaan.</p>

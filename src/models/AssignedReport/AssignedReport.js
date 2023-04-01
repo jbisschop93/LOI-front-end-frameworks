@@ -1,9 +1,9 @@
 import BaseModel from '@/models/BaseModel'
-import AssignedReportAddressModel from '@/models/AssignedReport/AssignedReportAddress'
-import AssignedReportDeferredMaintenanceModel from '@/models/AssignedReport/AssignedReportDeferredMaintenance'
-import AssignedReportModificationsModel from '@/models/AssignedReport/AssignedReportModifications'
-import AssignedReportRecordedDamagesModel from '@/models/AssignedReport/AssignedReportRecordedDamages'
-import AssignedReportTechnicalInstallationsModel from '@/models/AssignedReport/AssignedReportTechnicalInstallations'
+import AssignedReportAddressModel from '@/models/assignedreport/AssignedReportAddress'
+import AssignedReportDeferredMaintenanceModel from '@/models/assignedreport/AssignedReportDeferredMaintenance'
+import AssignedReportModificationsModel from '@/models/assignedreport/AssignedReportModifications'
+import AssignedReportRecordedDamagesModel from '@/models/assignedreport/AssignedReportRecordedDamages'
+import AssignedReportTechnicalInstallationsModel from '@/models/assignedreport/AssignedReportTechnicalInstallations'
 
 export default class AssignedReport extends BaseModel
 {

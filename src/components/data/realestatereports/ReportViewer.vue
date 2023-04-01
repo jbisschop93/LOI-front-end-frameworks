@@ -1,10 +1,12 @@
 <template>
-    <div v-if="this.currentReport !== null">
+    <div 
+        v-if="this.currentReport !== null"
+    >
         <b>Aangemaakt op:</b>
-        <p>{{ formatDate(currentReport.createdAt) }}</p>
+        <p>{{ $_dateFormatter_formatDate(currentReport.createdAt) }}</p>
 
         <b>Inspectie uitgevoerd op:</b>
-        <p>{{ formatDate(currentReport.inspectedAt) }}</p>
+        <p>{{ $_dateFormatter_formatDate(currentReport.inspectedAt) }}</p>
 
         <b>Adres:</b>
         <address>
@@ -13,22 +15,30 @@
         </address>
 
         <b>Opgenomen schades:</b>
-        <RecordedDamagesViewer :currentReport="currentReport"></RecordedDamagesViewer>
+        <recorded-damages-viewer 
+            :currentReport="currentReport"
+        ></recorded-damages-viewer>
 
         <hr/>
         
         <b>Achterstallig onderhoud:</b>
-        <DeferredMaintenanceViewer :currentReport="currentReport"></DeferredMaintenanceViewer>
+        <deferred-maintenance-viewer 
+            :currentReport="currentReport"
+        ></deferred-maintenance-viewer>
 
         <hr/>
 
         <b>Technische installaties:</b>
-        <TechnicalInstallationsViewer :currentReport="currentReport"></TechnicalInstallationsViewer>
+        <technical-installations-viewer 
+            :currentReport="currentReport"
+        ></technical-installations-viewer>
 
         <hr/>
 
         <b>Modificaties:</b>
-        <ModificationsViewer :currentReport="currentReport"></ModificationsViewer>
+        <modifications-viewer 
+            :currentReport="currentReport"
+        ></modifications-viewer>
     </div>
 </template>
 <script>

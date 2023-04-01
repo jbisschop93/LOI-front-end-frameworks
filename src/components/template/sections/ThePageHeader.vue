@@ -1,20 +1,32 @@
 <template>
     <header>
         <v-toolbar>
-            <router-link to="/">
+            <router-link 
+                to="/"
+            >
                 <img class="logo" :src="require('@/assets/logo.png')"/> 
             </router-link>
             <v-spacer></v-spacer>
-            <v-app-bar-nav-icon v-if="this.$store.state.user.is2FAAuthenthicated" class="navtoggle" @click.stop="navbarVisible = !navbarVisible"></v-app-bar-nav-icon>
+            <v-app-bar-nav-icon 
+                v-if="this.$store.state.user.is2FAAuthenthicated" 
+                class="navtoggle" @click.stop="navbarVisible = !navbarVisible"
+            ></v-app-bar-nav-icon>
         </v-toolbar>
         <v-navigation-drawer
             v-model="navbarVisible"
             location="bottom"
             temporary
         >
-            <v-list v-for="item in menuItems" v-bind:key="item"> 
-                <v-list-item :to="item.to">
-                    <font-awesome-icon :icon="item.icon" />
+            <v-list 
+                v-for="item in menuItems" 
+                v-bind:key="item"
+            > 
+                <v-list-item 
+                    :to="item.to"
+                >
+                    <font-awesome-icon 
+                        :icon="item.icon"
+                    />
                     {{ item.title }}
                 </v-list-item>
             </v-list>

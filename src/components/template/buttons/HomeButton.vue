@@ -1,8 +1,13 @@
 <template>
     <div class="panel p-4 text-center">
-        <router-link :to="to">
+        <router-link 
+            :to="to"
+        >
            <div class="icon">
-                <font-awesome-icon :icon="icon" size="4x" />
+                <font-awesome-icon 
+                    :icon="icon" 
+                    size="4x"
+                />
             </div>
             <h2>{{ title }}</h2>
         </router-link>

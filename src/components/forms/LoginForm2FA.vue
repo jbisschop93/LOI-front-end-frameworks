@@ -7,10 +7,16 @@
             type="text"  
             required
         ></v-text-field>
-        <v-btn @click="resetLogin">
+        <v-btn 
+            @click="resetLogin"
+        >
             Terug naar inloggen
         </v-btn>
-        <v-btn @click="handleLoginButton" class="float-right" color="primary">
+        <v-btn 
+            @click="handleLoginButton" 
+            class="float-right" 
+            color="primary"
+        >
             Ga verder
         </v-btn>
     </form>

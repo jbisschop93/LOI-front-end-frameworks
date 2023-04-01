@@ -1,7 +1,7 @@
 export default 
 {
     methods: {
-        formatDate(date)
+        $_dateFormatter_formatDate(date)
         {
             if(date != undefined)
             {

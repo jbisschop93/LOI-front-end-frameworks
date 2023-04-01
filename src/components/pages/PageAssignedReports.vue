@@ -1,20 +1,27 @@
 <template>
-    <PreviousPageBar pageTitle="Toegewezen rapportages"  previousRoute="/"/>
-    <v-container class="pt-2">
-        <ReportsOverview mode="assigned"/>
+    <the-previous-page-bar 
+      page-title="Toegewezen rapportages"
+      previous-route="/"
+    />
+    <v-container 
+      class="pt-2"
+    >
+        <reports-overview
+          mode="assigned"
+        />
         <div class="py-4"></div>
     </v-container>
   </template>
   
   <script>
-  import PreviousPageBar from '@/components/template/sections/PreviousPageBar'
+  import ThePreviousPageBar from '@/components/template/sections/ThePreviousPageBar'
   import ReportsOverview from '@/components/data/realestatereports/ReportsOverview.vue';
   
   export default {
     name: 'PageExecutedReports',
     components: {
         ReportsOverview,
-      PreviousPageBar
+        ThePreviousPageBar
     },
     props: [
       'menuItems'

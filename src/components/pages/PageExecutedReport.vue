@@ -1,19 +1,38 @@
 <template>
-    <PreviousPageBar :pageTitle="pageTitle" previousRoute="/uitgevoerde-rapportages"/>
-    <v-container class="pt-2">
-      <v-card class="p-2">
+    <the-previous-page-bar 
+      :page-title="pageTitle" 
+      previousRoute="/uitgevoerde-rapportages"
+    />
+    <v-container 
+      class="pt-2"
+    >
+      <v-card 
+        class="p-2"
+      >
             <v-row>
-              <v-col xs="12" md="8">
+              <v-col 
+                xs="12" 
+                md="8"
+              >
                 <h1>{{ pageTitle }}</h1>
               </v-col>
-              <v-col xs="12" md="4" class="md-text-right">
+              <v-col 
+                xs="12" 
+                md="4" 
+                class="md-text-right"
+              >
                 Beheer: 
-                <v-btn :to="editLink" color="primary">Ingediend rapport aanpassen</v-btn>
+                <v-btn 
+                  :to="editLink" 
+                  color="primary"
+                >Ingediend rapport aanpassen</v-btn>
               </v-col>
             </v-row>
             
             <div class="pt-3">
-              <ReportViewer :currentReport="currentReport"/>
+              <report-viewer 
+                :current-report="currentReport"
+              />
             </div>
           </v-card>
       </v-container>
@@ -21,7 +40,7 @@
   
   <script>
   import AssignedReportsService from '@/services/ApiServiceRealEstate'
-  import PreviousPageBar from '@/components/template/sections/PreviousPageBar'
+  import ThePreviousPageBar from '@/components/template/sections/ThePreviousPageBar'
   import ReportViewer from '@/components/data/realestatereports/ReportViewer.vue'; 
   
   export default { 
@@ -33,7 +52,7 @@
     },
     components: {
       ReportViewer,
-      PreviousPageBar
+      ThePreviousPageBar
     },
     props: [
       'menuItems',

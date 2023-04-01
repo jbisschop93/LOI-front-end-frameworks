@@ -1,16 +1,22 @@
 <template>
   <v-app>
     <v-main>
-      <PageHeader :menuItems="menuItems"/>
-      <router-view :menuItems="menuItems"/>
+      <ThePageHeader 
+        :menu-items="menuItems"
+      />
+      <router-view 
+        :menu-items="menuItems"
+        />
     </v-main>
-    <PageFooter :menuItems="menuItems"/>
+    <ThePageFooter 
+      :menu-items="menuItems"
+    />
   </v-app>
 </template>
 
 <script>
-import PageHeader from '@/components/template/sections/PageHeader.vue'
-import PageFooter from '@/components/template/sections/PageFooter.vue'
+import ThePageHeader from '@/components/template/sections/ThePageHeader.vue'
+import ThePageFooter from '@/components/template/sections/ThePageFooter.vue'
 
 export default {
   name: 'App',
@@ -46,12 +52,13 @@ export default {
     }
   },
   components: {
-    PageHeader,
-    PageFooter
+    ThePageHeader,
+    ThePageFooter
   }
 }
 </script>
 <style>
+  /* Application wide CSS */
   @import'~bootstrap/dist/css/bootstrap.css';
   html 
   {

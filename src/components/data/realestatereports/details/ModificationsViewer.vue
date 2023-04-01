@@ -1,6 +1,12 @@
 <template>
-    <p v-if="currentReport.modifications.length == 0">N.v.t.</p>
-    <v-expansion-panels v-else>
+    <p 
+        v-if="currentReport.modifications.length == 0"
+    >
+        N.v.t.
+    </p>
+    <v-expansion-panels 
+        v-else
+    >
       <v-expansion-panel
         v-for="(item, index) in currentReport.modifications" 
         v-bind:key="index"
@@ -8,7 +14,7 @@
       >
             <v-expansion-panel-text>
                 <b>Gemeld op:</b>
-                <p>{{ formatDate(item.createdAt) }}</p>
+                <p>{{ $_dateFormatter_formatDate(item.createdAt) }}</p>
                 <b>Reeds gedocumenteerd:</b>
                 <p v-if="item.isNew">
                     N.v.t. (nieuwe aanpassing)
@@ -20,12 +26,12 @@
                 <b>Locatie:</b>
                 <p>{{ item.location }}</p>
                 <b>Uitgevoerd door:</b>
-                <p>{{ translateExecutedBy(item.executedBy) }}</p>
+                <p>{{ $_translateFields_translateExecutedBy(item.executedBy) }}</p>
                 <b>Omschrijving:</b>
                 <p>{{ item.description }}</p>
 
                 <b>Actie vereist:</b>
-                <p>{{ translateActionRequired(item.actionRequired) }}</p>
+                <p>{{ $_translateFields_translateActionRequired(item.actionRequired) }}</p>
                 <b>Opmerkingen:</b>
                 <p>{{ item.extraInformation }}</p>
             </v-expansion-panel-text>
@@ -48,7 +54,7 @@
         {
             itemTitle(item) 
             {
-                return this.formatDate(item.createdAt) + ': ' + item.location
+                return this.$_dateFormatter_formatDate(item.createdAt) + ': ' + item.location
             }
         }
     }

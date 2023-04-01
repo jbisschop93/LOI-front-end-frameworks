@@ -1,13 +1,20 @@
 <template>
-        <div class="card">
+        <v-card>
             <v-list>
-                <v-list-item v-for="(report, index) in sortedReportsByMode" v-bind:key="index">
-                    <v-btn class="d-flex justify-content-start" block :to="routeExecutedReportDetail(report.id)">
-                        {{ formatDate(report.createdAt) }}: {{ report.title }}
+                <v-list-item 
+                    v-for="(report, index) in sortedReportsByMode" 
+                    v-bind:key="index"
+                >
+                    <v-btn 
+                        class="d-flex justify-content-start" 
+                        block 
+                        :to="routeExecutedReportDetail(report.id)"
+                    >
+                        {{ $_dateFormatter_formatDate(report.createdAt) }}: {{ report.title }}
                     </v-btn>
                 </v-list-item>
             </v-list>
-        </div>
+        </v-card>
 </template>
 <script>
     import AssignedReportsService from '@/services/ApiServiceRealEstate'
