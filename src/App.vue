@@ -29,7 +29,7 @@ export default {
         },
         {
           title: 'Kennisbase',
-          to: 'example',
+          to: '/kennisbase',
           icon: 'fa-solid fa-graduation-cap'
         },
         {

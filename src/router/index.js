@@ -9,7 +9,9 @@ import PageAssignedReports from '@/components/pages/PageAssignedReports'
 import PageAssignedReport from '@/components/pages/PageAssignedReport'
 import PageEditReport from '@/components/pages/PageEditReport'
 import PageSettings from '@/components/pages/PageSettings'
+import PageKnowledgeBase from '@/components/pages/PageKnowledgeBase'
 import PageLogOut from '@/components/pages/PageLogOut'
+import UserService from '@/services/UserService'
 import store from '@/store'
 
 const routes = [
@@ -80,6 +82,13 @@ const routes = [
         }
     },
     {
+        path: '/kennisbase',
+        component: PageKnowledgeBase,
+        meta: {
+            requiresAuth: true
+        }
+    },
+    {
         path: '/uitloggen',
         component: PageLogOut,
         meta: {
@@ -95,24 +104,34 @@ const router = createRouter({
 
 //Guard for secured pages
 router.beforeEach((to) => {
+    //Check is user is fully logged in
     if(store.state.user.is2FAAuthenthicated == false)
     {
-        console.log('trigger1: '+to.path)
-        console.log(store.state.user)
-        //User not fully logged in using 2 factor authenthication
-        if(store.state.user.isLogged == true)
-        {
-            //Redirect to 2FA page if needed
-            if(to.path != '/inloggen-stap2')
-                return { path: '/inloggen-stap2' }
-        } else {
-            //Redirect to login page if needed
-            if(to.path != '/inloggen')
-                return { path: '/inloggen' }
-        }
+        //Try autologin
+        UserService.tryAutoLogin().then((loggedIn)=>{
+            if(!loggedIn)
+            {
+                //Still not logged in yet? Continue routing to login pages
+                if(store.state.user.isLogged == true)
+                {
+                    //Redirect to 2FA page if needed
+                    if(to.path != '/inloggen-stap2')
+                        router.push({ path: '/inloggen-stap2' })
+                } else {
+                    //Redirect to login page if needed
+                    if(to.path != '/inloggen')
+                        router.push({ path: '/inloggen' })
+                }
+            } else {
+               //User has been logged in, but went to the login page
+               if(to.path == '/inloggen' || to.path == '/inloggen-stap2')
+               {
+                router.push({ path: '/' })
+               } 
+            }
+        })
     } else if(store.state.user.is2FAAuthenthicated == true && to.meta.hideForAuth)
     {
-        console.log('trigger4')
         return { path: '/' }
     }
 });

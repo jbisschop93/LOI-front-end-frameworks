@@ -1,29 +1,28 @@
 <template>
     <PreviousPageBar :pageTitle="pageTitle" previousRoute="/uitgevoerde-rapportages"/>
-    <div class="container pt-2">
-        <div class="card p-2">
-            <div class="row">
-              <div class="col-12 col-md-8">
-                <h1>{{ currentReport.title }}</h1>
-              </div>
-              <div class="col-12 col-md-4 md-text-right">
+    <v-container class="pt-2">
+      <v-card class="p-2">
+            <v-row>
+              <v-col xs="12" md="8">
+                <h1>{{ pageTitle }}</h1>
+              </v-col>
+              <v-col xs="12" md="4" class="md-text-right">
                 Beheer: 
                 <v-btn :to="editLink" color="primary">Ingediend rapport aanpassen</v-btn>
-              </div>
-            </div>
+              </v-col>
+            </v-row>
             
             <div class="pt-3">
               <ReportViewer :currentReport="currentReport"/>
             </div>
-        </div>
-        <div class="py-4"></div>
-    </div>
+          </v-card>
+      </v-container>
   </template>
   
   <script>
   import AssignedReportsService from '@/services/ApiServiceRealEstate'
   import PreviousPageBar from '@/components/template/sections/PreviousPageBar'
-  import ReportViewer from '@/components/data/executedreports/ReportViewer.vue'; 
+  import ReportViewer from '@/components/data/realestatereports/ReportViewer.vue'; 
   
   export default { 
     name: 'PageExecutedReport',
@@ -47,7 +46,7 @@
         },
         editLink()
         {
-          return this.currentReport != null ? '/wijzig-rapportage/'+this.currentReport.id : null
+          return this.currentReport != null ? '/wijzig-rapportage/'+this.currentReport.id : '/'
         }
     },
     created() {

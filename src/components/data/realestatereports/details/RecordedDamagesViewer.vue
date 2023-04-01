@@ -1,5 +1,5 @@
 <template>
-    <p v-if="currentReport.technicalInstallations.length == 0">N.v.t.</p>
+    <p v-if="currentReport.recordedDamages.length == 0">N.v.t.</p>
     <v-expansion-panels v-else>
       <v-expansion-panel
         v-for="(item, index) in currentReport.recordedDamages" 
@@ -11,23 +11,23 @@
                 <p>{{ formatDate(item.createdAt) }}</p>
                 <b>Locatie:</b>
                 <p>{{ item.location }}</p>
-                <b>Type installatie:</b>
-                <p>{{ translateTypeTechnicalInstallation(item.typeInstallation) }}</p>
-                <b>Gemelde storingen:</b>
-                <p>{{ item.reportedFailures }}</p>
-                <b>Test procesure:</b>
-                <p>{{ item.testProcedure }}</p>
-                <b>Goedgekeurd</b>
-                <p>{{ item.approved ? 'Ja' : 'Nee' }}</p>
-                <b>Opmerkingen</b>
+                <b>Nieuwe schade:</b>
+                <p>{{ item.isNew }}</p>
+                <b>Type schade:</b>
+                <p>{{ translateTypeDamage(item.typeDamage) }}</p>
+                <b>Datum:</b>
+                <p>{{ formatDate(item.date) }}</p>
+                <b>Acute actie vereist:</b>
+                <p>{{ item.urgentActionRequired ? 'Ja' : 'Nee' }}</p>
+                <b>Omschrijving:</b>
                 <p>{{ item.description }}</p>
             </v-expansion-panel-text>
         </v-expansion-panel>
     </v-expansion-panels>
 </template>
 <script>
-    import dateFormatter from '@/mixins/dates/dateFormatter';
-    import translateFields from '@/mixins/components/executedreports/translateFields'
+    import translateFields from '@/mixins/components/realestatereports/translateFields' 
+    import dateFormatter from '@/mixins/dates/dateFormatter'
     export default 
     {
         props: [

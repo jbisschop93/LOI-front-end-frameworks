@@ -85,7 +85,7 @@ export default
         })
     },
 
-    tryAutoLogin()
+    async tryAutoLogin()
     {
         if(localStorage.getItem('userObject') != null)
         {
@@ -93,29 +93,32 @@ export default
             {
                 //Retrieve saved user object
                 const userObj = JSON.parse(localStorage.getItem('userObject'))
-
                 //Try automaticly logging in again
-                this.doLogin(userObj.userName, userObj.tmpPassword, false).then(response => {
+                const result = await this.doLogin(userObj.userName, userObj.tmpPassword, false).then(response => {
                     if(response == false)
                     {
                         //Delete localStorage item when invalid
                         localStorage.removeItem('userObject')
+                        //Return false
+                        return false
                     } else {
                         //TODO: We should actually validate something here
                         store.dispatch({
                             type: 'userAuthenticated',
                             userObject: response     
-                        }).then(() => {
-                            router.push({
-                                path: '/'
-                            })
                         })
+                        return true
                     }
                 })
+                return result
             } catch (err) {
                 console.log('Tried logging in, but failed')
                 console.log(err)
+                return false
             }
+        } else {
+            //No user object in localstorage
+            return false
         }
     }
 }

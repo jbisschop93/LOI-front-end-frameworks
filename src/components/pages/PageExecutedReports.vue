@@ -8,7 +8,7 @@
   
   <script>
   import PreviousPageBar from '@/components/template/sections/PreviousPageBar'
-  import ReportsOverview from '@/components/data/executedreports/ReportsOverview.vue';
+  import ReportsOverview from '@/components/data/realestatereports/ReportsOverview.vue';
   
   export default {
     name: 'PageExecutedReports',

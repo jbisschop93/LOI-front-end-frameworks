@@ -2,7 +2,7 @@
         <div class="card">
             <v-list>
                 <v-list-item v-for="(report, index) in sortedReportsByMode" v-bind:key="index">
-                    <v-btn class="d-flex justify-content-start" block="true" :to="routeExecutedReportDetail(report.id)">
+                    <v-btn class="d-flex justify-content-start" block :to="routeExecutedReportDetail(report.id)">
                         {{ formatDate(report.createdAt) }}: {{ report.title }}
                     </v-btn>
                 </v-list-item>

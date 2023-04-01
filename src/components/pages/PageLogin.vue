@@ -1,18 +1,17 @@
 <template>
-    <div class="container pt-5">
-      <div class="row justify-content-center">
-        <div class="col-6">
-            <div class="card p-3">
-                <h1>U bent nog niet ingelogd!</h1>
-                <p>Vul hieronder uw gebruikersnaam- en wachtwoord in om te beginnen.</p>
-                <p>In de demo applicatie kunt u inloggen met "demo" (gebruikersnaam) / "demo123" (wachtwoord).</p>
-                
-                <LoginForm/>
-            </div>
-        </div>
-      </div>
-      <div class="py-4"></div>
-    </div>
+    <v-container class="pt-5">
+      <v-row class="justify-content-center">
+        <v-col md="6">
+          <v-card class="p-3">
+            <h1>U bent nog niet ingelogd!</h1>
+            <p>Vul hieronder uw gebruikersnaam- en wachtwoord in om te beginnen.</p>
+            <p>In de demo applicatie kunt u inloggen met "demo" (gebruikersnaam) / "demo123" (wachtwoord).</p>
+            
+            <LoginForm/>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </template>
   
   <script>

@@ -1,25 +1,17 @@
 <template>
     <PreviousPageBar :pageTitle="pageTitle"/>
-    <div class="container pt-2">
-        <div class="card p-2">
-            <div class="row">
-              <div class="col-12 col-md-8">
-                <h1>{{ currentReport.title }}</h1>
-              </div>
-            </div>
-            
-            <div class="pt-3">
-              <ReportEditor :currentReport="currentReport"/>
-            </div>
-        </div>
-        <div class="py-4"></div>
-    </div>
+    <v-container class="pt-2">
+      <v-card class="pt-2">
+        <h1>{{ pageTitle}}</h1>
+        <ReportEditor :currentReport="currentReport"/>
+      </v-card>
+    </v-container>
   </template>
   
   <script>
   import AssignedReportsService from '@/services/ApiServiceRealEstate'
   import PreviousPageBar from '@/components/template/sections/PreviousPageBar'
-  import ReportEditor from '@/components/data/executedreports/ReportEditor.vue'; 
+  import ReportEditor from '@/components/data/realestatereports/ReportEditor.vue'; 
   
   export default { 
     name: 'PageExecutedReport',

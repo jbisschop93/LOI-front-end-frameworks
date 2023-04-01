@@ -1,7 +1,7 @@
 <template>
-    <div class="panel h-100 p-5">
+    <div class="panel p-4 text-center">
         <router-link :to="to">
-            <div class="icon">
+           <div class="icon">
                 <font-awesome-icon :icon="icon" size="4x" />
             </div>
             <h2>{{ title }}</h2>
@@ -27,16 +27,19 @@
         text-align: center;
         background-color:rgba(255,255,255,0.5); 
         cursor:pointer;
+        padding-top:50px !important;
+        padding-bottom:50px !important;
     }
 
     .icon
     {
-        margin-bottom:15%;
+        margin-bottom:15px;
     }
 
     h2 
     {
-        font-size:14px;
+        font-size:16px;
+        text-align:center;
     }
 
     .panel a 

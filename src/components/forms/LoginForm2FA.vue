@@ -19,10 +19,6 @@
     import UserService from '@/services/UserService';
     export default 
     {
-        data: () => {
-
-        },
-
         methods: {
             resetLogin()
             {

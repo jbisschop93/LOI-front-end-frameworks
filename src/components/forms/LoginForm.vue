@@ -26,10 +26,6 @@
     import UserService from '@/services/UserService';
     export default 
     {
-        data() {
-
-        },
-
         methods: {
             notInPrototype()
             {
@@ -46,11 +42,6 @@
 
                 UserService.doLogin(username, password)
             }
-        },
-
-        //Autologin (from localstorage)
-        created(){
-            UserService.tryAutoLogin()
         }
     }
 </script>

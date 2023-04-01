@@ -33,10 +33,10 @@
 </template>
 <script>
 import dateFormatter from '@/mixins/dates/dateFormatter'; 
-import DeferredMaintenanceViewer from '@/components/data/executedreports/details/DeferredMaintenanceViewer.vue';
-import RecordedDamagesViewer from '@/components/data/executedreports/details/RecordedDamagesViewer.vue'; 
-import TechnicalInstallationsViewer from '@/components/data/executedreports/details/TechnicalInstallationsViewer.vue';
-import ModificationsViewer from '@/components/data/executedreports/details/ModificationsViewer.vue';
+import DeferredMaintenanceViewer from '@/components/data/realestatereports/details/DeferredMaintenanceViewer.vue';
+import RecordedDamagesViewer from '@/components/data/realestatereports/details/RecordedDamagesViewer.vue'; 
+import TechnicalInstallationsViewer from '@/components/data/realestatereports/details/TechnicalInstallationsViewer.vue';
+import ModificationsViewer from '@/components/data/realestatereports/details/ModificationsViewer.vue';
 
 export default
 {

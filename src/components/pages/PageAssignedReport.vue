@@ -4,7 +4,7 @@
       <v-card class="p-2">
             <v-row>
               <v-col xs="12" md="8">
-                <h1>{{ currentReport.title }}</h1>
+                <h1>{{ pageTitle }}</h1>
               </v-col>
               <v-col xs="12" md="4" class="md-text-right">
                 Beheer: 
@@ -22,15 +22,13 @@
   <script> 
   import AssignedReportsService from '@/services/ApiServiceRealEstate'
   import PreviousPageBar from '@/components/template/sections/PreviousPageBar'
-  import ReportViewer from '@/components/data/executedreports/ReportViewer.vue'; 
+  import ReportViewer from '@/components/data/realestatereports/ReportViewer.vue'; 
   
   export default {
     name: 'PageAssignedReport',
     data: () => {
         return {
-            'currentReport': {
-              'title': 'Bezig met ophalen...'
-            }
+            'currentReport': null
         }
     },
     components: {
@@ -48,7 +46,7 @@
         },
         editLink()
         {
-          return this.currentReport != null ? '/wijzig-rapportage/'+this.currentReport.id : null
+          return this.currentReport != null ? '/wijzig-rapportage/'+this.currentReport.id : '/'
         }
     },
     created() {

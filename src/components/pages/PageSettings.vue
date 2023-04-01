@@ -44,6 +44,9 @@ export default {
     components: {
         PreviousPageBar
     },
+    props: [
+        'menuItems'
+    ],
     computed: {
         userName()
         {

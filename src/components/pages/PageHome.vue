@@ -2,7 +2,7 @@
   <v-container>
     <h1>Direct naar:</h1>
     <v-row>
-      <v-col class="col-6 homebuttoncontainer" v-for="(item, index) in menuItems" v-bind:key="index">
+      <v-col cols="6" md="6" class="homebuttoncontainer" v-for="(item, index) in menuItems" v-bind:key="index">
         <HomeButton :icon="item.icon" :title="item.title" :to="item.to"/>
       </v-col>
     </v-row>
@@ -29,10 +29,5 @@ export default {
 .v-container, .container h1
 {
   color:#FFFFFF;
-}
-
-.homebuttoncontainer
-{
-  margin-bottom:25px;
 }
 </style>

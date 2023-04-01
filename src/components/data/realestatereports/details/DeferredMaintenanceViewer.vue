@@ -20,7 +20,7 @@
     </v-expansion-panels>
 </template>
 <script>
-    import translateFields from '@/mixins/components/executedreports/translateFields'
+    import translateFields from '@/mixins/components/realestatereports/translateFields'
     import dateFormatter from '@/mixins/dates/dateFormatter'
     export default 
     {
