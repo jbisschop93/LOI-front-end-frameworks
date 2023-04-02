@@ -3,9 +3,9 @@
 ## Description
 This is a prototype application for Real Estate Works, and does not represent the final product yet. 
 
-If Real Estate Care gives us the job, we first need to futher discuss their vision and wishes and check with them if the applications matches this so far before futher developping.
+If Real Estate Care gives us the job, we first need to futher discuss their vision and wishes for this project and check with them if the applications matches this so far before futher developping.
 
-The prototype should be able to help us archieve this, by representing a fully functioning app.
+This prototype should however be able to help us with this process.
 
 ## Project setup
 ```
