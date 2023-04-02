@@ -6,7 +6,17 @@
         <p>{{ $_dateFormatter_formatDate(currentReport.createdAt) }}</p>
 
         <b>Inspectie uitgevoerd op:</b>
-        <p>{{ $_dateFormatter_formatDate(currentReport.inspectedAt) }}</p>
+        <p 
+            v-if="currentReport.inspectedAt"
+        >
+            {{ $_dateFormatter_formatDate(currentReport.inspectedAt) }}
+        </p>
+        <p 
+            v-else 
+        >
+            Nog niet uitgevoerd
+        </p>
+
 
         <b>Adres:</b>
         <address>
